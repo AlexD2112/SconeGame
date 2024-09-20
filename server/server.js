@@ -9,8 +9,25 @@ app.use('/js', express.static(path.join(__dirname, '../js')));
 app.use('/data', express.static(path.join(__dirname, '../data')));
 
 // Serve the main HTML file
+// Route for each HTML file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index.html'));
+    res.sendFile(path.join(__dirname, '../views/home.html'));
+});
+
+app.get('/map', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/map.html'));
+});
+
+app.get('/estate', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/estate.html'));
+});
+
+app.get('/claimants', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/claimants.html'));
+});
+
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/profile.html'));
 });
 
 const PORT = process.env.PORT || 3000;

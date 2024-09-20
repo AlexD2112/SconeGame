@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Scone</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="icon" href="../assets/images/SconeLogoAI.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/map">Map</a></li>
+            <li><a href="/estate">Estate</a></li>
+            <li><a href="/claimants">Claimants</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content for Home -->
+    <main>
+        <section id="interactive-map">
+            <!-- Leaflet Map -->
+            <div id="map"></div> <!-- Set height here or via CSS -->
+            <div id="regionInfoBox" class="info-box">
+                <h3>Region Information</h3>
+                <p>Filler text: Information about the region will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/mapScript.js"></script>
+</body>
+</html>

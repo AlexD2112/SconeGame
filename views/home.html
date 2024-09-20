@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="icon" href="../assets/images/SconeLogoAI.png" type="image/png">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#rules">Game Rules</a></li>
-            <li><a href="#leaderboard">Leaderboard</a></li>
-            <li><a href="#profile">Profile</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/map">Map</a></li>
+            <li><a href="/estate">Estate</a></li>
+            <li><a href="/claimants">Claimants</a></li>
+            <li><a href="/profile">Profile</a></li>
         </ul>
     </nav>
 
@@ -24,9 +27,12 @@
         <section id="interactive-map">
             <!-- Canvas element -->
             <canvas id="mapCanvas"></canvas>
+            <div id="dateMonthDayBox" class="overlay-text">Month Day</div>
+            <div id="dateYearBox" class="overlay-text">Year</div>
+            <div id="situationBox" class="overlay-text">Situation</div>
         </section>
     </main>
 
-    <script src="../js/scripts.js"></script>
+    <script src="../js/homeScript.js"></script>
 </body>
 </html>

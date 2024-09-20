@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Medieval';  /* This is the name you'll use in CSS */
+    src: url('/assets/fonts/CloisterBlack.ttf') format('truetype');
+    font-weight: normal;  /* You can specify other weights if available */
+    font-style: normal;   /* Specify if the font is italic, etc. */
+}
+
 /* Global Styles */
 body {
     margin: 0;
@@ -44,10 +51,16 @@ main {
 
 #interactive-map {
     width: 100%;
-    flex-grow: 1; /* This makes the map section take up the remaining height */
+    flex: 1; /* This makes the map section take up the remaining height */
+    display:flex;
     position: relative;
-    background-color: #ddd; /* Placeholder background */
     z-index: 1;
+}
+
+#map {
+    flex-grow: 1; /* Ensures the map takes all the space of #interactive-map */
+    width: 100%; /* Full width */
+    background-color: #add8e6;
 }
 
 canvas#mapCanvas {
@@ -55,4 +68,34 @@ canvas#mapCanvas {
     height: 100%; /* Ensure canvas fills the container */
     position: absolute;
     top: 0;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 5vh;
+    font-family: "Medieval", sans-serif;
+    position: absolute;
+    left: 50%;    /* Move to the center horizontally */
+    transform: translate(-50%, 0);  /* Adjust by 50% of its own width and height */
+    text-align: center; /* Center the text inside the box */
+}
+
+.leaflet-container {
+    cursor: default !important; /* This will change the cursor to the default arrow */
+    z-index: 2;
+}
+
+.info-box {
+    background-color: #005EB8; /* Blue background */
+    border: 2px solid #B37E31; /* Golden border */
+    color: white; /* White text */
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;  /* Position near the bottom */
+    left: 20px;    /* Position near the left */
+    width: 300px;  /* Set a fixed width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    font-family: Arial, sans-serif;
+    z-index: 20;
+    display: none; /* Hide by default */
 }
