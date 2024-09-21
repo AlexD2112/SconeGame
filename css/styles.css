@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ADD8E6;
     height: 100vh; /* Ensure body fills the viewport */
     display: flex;
     flex-direction: column;

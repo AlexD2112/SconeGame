@@ -18,6 +18,9 @@ let isImageLoaded = false;  // Flag to track if the image has loaded
 let mapWidth;
 const image = new Image();
 image.src = imageUrl;
+let extraSideSpace = true;
+
+let renderWidth, renderHeight, xOffset, yOffset;
 
 image.onload = function () {
     isImageLoaded = true; // Set flag to true when the image has loaded
@@ -31,9 +34,6 @@ image.onload = function () {
     // Calculate aspect ratios
     const imgAspectRatio = imgWidth / imgHeight;
     const canvasAspectRatio = canvasWidth / canvasHeight;
-
-    let renderWidth, renderHeight, xOffset, yOffset;
-    let extraSideSpace = true;
 
     // Compare aspect ratios to determine how the image fits the canvas
     if (imgAspectRatio > canvasAspectRatio) {
@@ -110,18 +110,31 @@ function runTextBoxAdjustment() {
 
     // Function to adjust position dynamically
     function adjustTextBoxPosition() {
-        const canvasRect = canvas.getBoundingClientRect();
+        if (extraSideSpace) {
 
-        // Dynamically adjust the position of dateMonthBox (e.g., shift it based on some condition)
-        dateMonthBox.style.left = mapWidth * 1 / 6 + "px";
-        dateMonthBox.style.bottom = '1vh'; // Set a specific distance from bottom
+            // Dynamically adjust the position of dateMonthBox (e.g., shift it based on some condition)
+            dateMonthBox.style.left = mapWidth * 1 / 6 + "px";
+            dateMonthBox.style.bottom = '1vh'; // Set a specific distance from bottom
 
-        // Dynamically adjust the position of yearBox
-        yearBox.style.left = mapWidth * 4.2/5 + "px";  // Center based on canvas
-        yearBox.style.bottom = '1vh'; // Set a specific distance from bottom
+            // Dynamically adjust the position of yearBox
+            yearBox.style.left = mapWidth * 4.2/5 + "px";  // Center based on canvas
+            yearBox.style.bottom = '1vh'; // Set a specific distance from bottom
 
-        situationBox.style.left = (canvas.width + mapWidth) / 2 + "px";
-        situationBox.style.top = '50vh';
+            situationBox.style.left = (canvas.width + mapWidth) / 2 + "px";
+            situationBox.style.top = '50vh';
+        } else {
+            //Find bottom of image in vh
+            const imageBottom = 100 - (renderHeight / canvas.height * 100);
+            console.log(imageBottom);
+            dateMonthBox.style.left = mapWidth * 1 / 6 + "px";
+            dateMonthBox.style.bottom = imageBottom + 'vh';
+
+            yearBox.style.left = mapWidth * 4.2/5 + "px";
+            yearBox.style.bottom = imageBottom + 'vh';
+
+            //Hide situationBox
+            situationBox.style.display = 'none';
+        }
     }
 
     // Call the function on page load

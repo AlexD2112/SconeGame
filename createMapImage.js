@@ -11,7 +11,7 @@ const outputImagePath = path.join(__dirname, './assets/images/ScotlandMap.png');
 const SEA_COLOR = [255, 255, 255];  // White (original sea color)
 const WHITE = [255, 255, 255];  // White for resetting everything
 const EARLDOM_COLOR = [0, 94, 184];  // Blue from the Scottish flag
-const SEA_FINAL_COLOR = [173, 216, 230];  // Light blue for sea
+const SEA_FINAL_COLOR =     ;  // Light blue for sea
 const BLACK = [0, 0, 0];  // Black for borders
 
 // Load JSON map data
