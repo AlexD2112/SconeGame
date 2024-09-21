@@ -47,16 +47,18 @@ image.onload = function () {
         renderWidth = canvasHeight * imgAspectRatio;
     }
 
+    console.log(renderWidth, renderHeight, canvasWidth, canvasHeight);
+
     mapWidth = renderWidth;
 
     // Fill the canvas with a blue field (for the remaining space)
     ctx.fillStyle = `rgb(173, 216, 230)`;
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
-    // Draw the image, centered and scaled appropriately
-    ctx.drawImage(image, 0, 0, renderWidth, renderHeight);
-
     if (extraSideSpace) {
+        // Draw the image, centered and scaled appropriately
+        ctx.drawImage(image, 0, 0, renderWidth, renderHeight);
+
         // Load logo halfway through remaining space
         const logo = new Image();
         logo.src = logoUrl;
@@ -77,6 +79,29 @@ image.onload = function () {
 
             ctx.drawImage(logo, logoX, logoY, logoWidth, logoHeight);
         }
+    } else {
+        //Draw the image at the bottom of the screen
+        ctx.drawImage(image, 0, canvas.height - renderHeight, renderWidth, renderHeight);
+
+        const logo = new Image();
+        logo.src = logoUrl;
+
+        logo.onload = function () {
+            let logoWidth = logo.width;
+            let logoHeight = logo.height;
+
+            // Scale the logo so that height is no more canvas height minus renderHeight
+            if (logoHeight > canvasHeight - renderHeight) {
+                const scale = (canvasHeight - renderHeight) / logoHeight;
+                logoWidth *= scale;
+                logoHeight *= scale;
+            }
+
+            const logoX = 0;
+            const logoY = 0;
+
+            ctx.drawImage(logo, logoX, logoY, logoWidth, logoHeight);
+        }       
     }
 
     // Now we check if the document is already loaded
@@ -124,16 +149,18 @@ function runTextBoxAdjustment() {
             situationBox.style.top = '50vh';
         } else {
             //Find bottom of image in vh
-            const imageBottom = 100 - (renderHeight / canvas.height * 100);
+            const mapScale = renderHeight / canvas.height;
+            console.log(mapScale);
+            const imageBottom = (6 * mapScale - 4) / 2;
             console.log(imageBottom);
             dateMonthBox.style.left = mapWidth * 1 / 6 + "px";
             dateMonthBox.style.bottom = imageBottom + 'vh';
 
             yearBox.style.left = mapWidth * 4.2/5 + "px";
             yearBox.style.bottom = imageBottom + 'vh';
-
-            //Hide situationBox
-            situationBox.style.display = 'none';
+        
+            //hide situationBox
+            situationBox.style.display = "none";
         }
     }
 

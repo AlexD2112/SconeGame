@@ -70,13 +70,23 @@ canvas#mapCanvas {
     top: 0;
 }
 
-.overlay-text {
+.timestamp-text {
     color: white;
     font-size: 5vh;
     font-family: "Medieval", sans-serif;
     position: absolute;
     left: 50%;    /* Move to the center horizontally */
-    transform: translate(-50%, 0);  /* Adjust by 50% of its own width and height */
+    transform: translate(-50%, 0%);  /* Adjust by 50% of its own width and height */
+    text-align: center; /* Center the text inside the box */
+}
+
+.overlay-text {
+    color: white;
+    font-size: 4vh;
+    font-family: "Medieval", sans-serif;
+    position: absolute;
+    left: 50%;    /* Move to the center horizontally */
+    transform: translate(-50%, 0%);  /* Adjust by 50% of its own width and height */
     text-align: center; /* Center the text inside the box */
 }
 
