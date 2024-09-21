@@ -90,9 +90,15 @@ image.onload = function () {
             let logoWidth = logo.width;
             let logoHeight = logo.height;
 
-            // Scale the logo so that height is no more canvas height minus renderHeight
+            // Scale the logo so that height is no more canvas height minus renderHeight, and width is no more than half of the canvas width
             if (logoHeight > canvasHeight - renderHeight) {
                 const scale = (canvasHeight - renderHeight) / logoHeight;
+                if (logoWidth > canvasWidth / 2) {
+                    const scale2 = (canvasWidth / 2) / logoWidth;
+                    if (scale2 < scale) {
+                        scale = scale2;
+                    }
+                }
                 logoWidth *= scale;
                 logoHeight *= scale;
             }
