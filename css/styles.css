@@ -14,6 +14,11 @@ body {
     height: 100vh; /* Ensure body fills the viewport */
     display: flex;
     flex-direction: column;
+
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
 }
 
 /* Navigation Bar */
@@ -88,6 +93,10 @@ canvas#mapCanvas {
     left: 50%;    /* Move to the center horizontally */
     transform: translate(-50%, 0%);  /* Adjust by 50% of its own width and height */
     text-align: center; /* Center the text inside the box */
+
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
+    bottom: env(safe-area-inset-bottom);
 }
 
 .leaflet-container {
