@@ -81,8 +81,7 @@ image.onload = function () {
         }
     } else {
         //Draw the image at the bottom of the screen
-        const insets = getSafeAreaInsets();
-        ctx.drawImage(image, 0, canvas.height - (renderHeight + insets.bottom + insets.top), renderWidth, renderHeight);
+        ctx.drawImage(image, 0, canvas.height - (renderHeight), renderWidth, renderHeight);
 
         const logo = new Image();
         logo.src = logoUrl;
@@ -128,14 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
         runTextBoxAdjustment();
     }
 });
-
-function getSafeAreaInsets() {
-    const body = document.body;
-    const computedStyle = window.getComputedStyle(body);
-    const safeAreaBottom = parseFloat(computedStyle.paddingBottom);
-    const safeAreaTop = parseFloat(computedStyle.paddingTop);
-    return { top: safeAreaTop, bottom: safeAreaBottom };
-}
 
 function runTextBoxAdjustment() {
     // Get references to the text boxes

@@ -11,7 +11,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #ADD8E6;
-    height: 100vh; /* Ensure body fills the viewport */
+    height: 100dvh; /* Ensure body fills the viewport */
     display: flex;
     flex-direction: column;
 
@@ -77,7 +77,7 @@ canvas#mapCanvas {
 
 .timestamp-text {
     color: white;
-    font-size: 5vh;
+    font-size: 5dvh;
     font-family: "Medieval", sans-serif;
     position: absolute;
     left: 50%;    /* Move to the center horizontally */
@@ -87,7 +87,7 @@ canvas#mapCanvas {
 
 .overlay-text {
     color: white;
-    font-size: 4vh;
+    font-size: 4dvh;
     font-family: "Medieval", sans-serif;
     position: absolute;
     left: 50%;    /* Move to the center horizontally */
