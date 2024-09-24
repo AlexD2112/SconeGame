@@ -195,6 +195,10 @@ function updateSituationBox() {
 async function handleRequest(request) {
     const url = new URL(request.url);
 
+    console.log(url.pathname);
+    console.log(url.searchParams.get('code'));
+    console.log(url.searchParams);
+
     // Check if this is the callback URL
     if (url.pathname === '/auth/discord/callback') {
         const code = url.searchParams.get('code');
