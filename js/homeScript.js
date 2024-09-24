@@ -176,3 +176,75 @@ function runTextBoxAdjustment() {
     // Optionally, call the function on window resize to reposition the text dynamically
     window.addEventListener('resize', adjustTextBoxPosition);
 }
+
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request));
+})
+
+document.addEventListener('DOMContentLoaded', updateSituationBox);
+
+function updateSituationBox() {
+    const id = localStorage.getItem('userID');
+
+    if (id) {
+        const situationBox = document.getElementById("situationBox");
+        situationBox.innerHTML = `Welcome, ${id}`;
+    }
+}
+
+
+async function handleRequest(request) {
+    const url = new URL(request.url);
+
+    // Check if this is the callback URL
+    if (url.pathname === '/auth/discord/callback') {
+        const code = url.searchParams.get('code');
+
+        if (!code) {
+            return new Response('Error: no code provided', { status: 400 });
+        }
+
+        // Step 1: Exchange the code for an access token
+        const tokenResponse = await fetch('https://discord.com/api/oauth2/token', {
+            method: 'POST',
+            body: new URLSearchParams({
+                client_id: '1288255745544028353', // replace with your client_id
+                client_secret: 'I_WPJnzpQtCs_UloqpAiimguxPo6tA8P', // replace with your client_secret
+                grant_type: 'authorization_code',
+                code: code,
+                redirect_uri: 'https://stoneofscone.org/auth/discord/callback' // match your redirect URI
+            }),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
+
+        const tokenData = await tokenResponse.json();
+
+        if (!tokenData.access_token) {
+            return new Response('Error fetching access token', { status: 500 });
+        }
+
+        const accessToken = tokenData.access_token;
+
+        // Step 2: Fetch the Discord user's info
+        const userResponse = await fetch('https://discord.com/api/v10/users/@me', {
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            }
+        });
+
+        const discordUser = await userResponse.json();
+
+        localStorage.setItem('discordUser', JSON.stringify(discordUser));
+        localStorage.setItem('userID', discordUser.id);
+
+        // Step 3: Respond with user info (you can store this in KV, a database, or a cookie)
+        return new Response(`Logged in as: ${discordUser.username}#${discordUser.discriminator}, ID: ${discordUser.id}`, {
+            headers: { 'Content-Type': 'text/html' }
+        });
+    }
+
+    // Fallback in case the URL does not match
+    return new Response('Invalid request', { status: 404 });
+}
