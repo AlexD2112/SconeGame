@@ -126,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isImageLoaded) {
         runTextBoxAdjustment();
     }
+
+    updateSituationBox();
 });
 
 function runTextBoxAdjustment() {
@@ -181,14 +183,11 @@ addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request));
 })
 
-document.addEventListener('DOMContentLoaded', updateSituationBox);
-
 function updateSituationBox() {
-    const id = localStorage.getItem('userID');
-
-    if (id) {
+    const userID = getCookie('userID');
+    if (userID) {
         const situationBox = document.getElementById("situationBox");
-        situationBox.innerHTML = `Welcome, ${id}`;
+        situationBox.innerHTML = `Welcome, user ${userID}`;
     }
 }
 
@@ -219,6 +218,8 @@ async function handleRequest(request) {
             }
         });
 
+        console.log(tokenResponse);
+
         const tokenData = await tokenResponse.json();
 
         if (!tokenData.access_token) {
@@ -236,15 +237,22 @@ async function handleRequest(request) {
 
         const discordUser = await userResponse.json();
 
-        localStorage.setItem('discordUser', JSON.stringify(discordUser));
-        localStorage.setItem('userID', discordUser.id);
-
-        // Step 3: Respond with user info (you can store this in KV, a database, or a cookie)
-        return new Response(`Logged in as: ${discordUser.username}#${discordUser.discriminator}, ID: ${discordUser.id}`, {
-            headers: { 'Content-Type': 'text/html' }
+        return new Response(null, {
+            status: 302,
+            headers: {
+                'Location': '/', // Redirect back to the homepage after login
+                'Set-Cookie': `userID=${discordUser.id}; Path=/; HttpOnly; Secure; SameSite=Lax;`
+            }
         });
     }
 
     // Fallback in case the URL does not match
     return new Response('Invalid request', { status: 404 });
 }
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
