@@ -1,10 +1,11 @@
 {
   "name": "sconegame",
   "version": "1.0.0",
-  "description": "",
+  "description": "A game based on the Scottish Wars of Independence",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "wrangler dev",
+    "build": "wrangler publish"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "canvas": "^2.11.2",
     "express": "^4.21.0",
+    "node-fetch": "^2.6.7",
     "sconegame": "file:"
   }
 }

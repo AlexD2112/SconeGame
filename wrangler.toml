@@ -2,7 +2,9 @@ name = "sconegame-worker"
 type = "javascript"
 account_id = "773a8118b1ba798dc4c6e12bd1c1566e"
 workers_dev = true
+main = "./src/index.js"
+compatibility_date = "2024-09-24"
 
 [env.production]
 zone_id = "dba1edac45d6dda43397135ac33ae380"
-route = "https://stoneofscone.org/*"
+routes = ["https://stoneofscone.org/*"]
