@@ -13,6 +13,10 @@ async function handleRequest(request) {
         return await handleAuthRequest(url);
     }
 
+    if (url.pathname === '/get-user-info') {
+        return await getUserInfo(request);
+    }
+
     // Serve static assets (CSS, images, etc.) or views
     return await serveRequest(url.pathname);
 }
@@ -27,4 +31,41 @@ async function serveRequest(path) {
     }
 
     return new Response('Not Found', { status: 404 });
+}
+
+async function getUserInfo(request) {
+    const cookieHeader = request.headers.get('cookie');
+    if (!cookieHeader) {
+        return new Response(JSON.stringify({ error: 'No cookie found' }), {
+            headers: { 'Content-Type': 'application/json' },
+            status: 401
+        });
+    }
+
+    const userID = getCookieValue(cookieHeader, 'userID');
+    if (!userID) {
+        return new Response(JSON.stringify({ error: 'User not authenticated' }), {
+            headers: { 'Content-Type': 'application/json' },
+            status: 401
+        });
+    }
+
+    // Here, you would typically fetch more user data from a database or external API
+    // For simplicity, we'll just return the userID
+    const userInfo = { userID };
+
+    return new Response(JSON.stringify(userInfo), {
+        headers: { 'Content-Type': 'application/json' }
+    });
+}
+
+function getCookieValue(cookieHeader, name) {
+    const cookies = cookieHeader.split(';');
+    for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.trim().split('=');
+        if (cookieName === name) {
+            return cookieValue;
+        }
+    }
+    return null;
 }

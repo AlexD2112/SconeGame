@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         runTextBoxAdjustment();
     }
 
-    updateSituationBox();
+    fetchUserInfo();
 });
 
 function runTextBoxAdjustment() {
@@ -179,14 +179,25 @@ function runTextBoxAdjustment() {
     window.addEventListener('resize', adjustTextBoxPosition);
 }
 
-function updateSituationBox() {
-    console.log(document.cookie);
-    console.log(document);
-    const userID = getCookie('userID');
-    if (userID) {
-        const situationBox = document.getElementById("situationBox");
-        situationBox.innerHTML = `Welcome, user ${userID}`;
-    }
+function fetchUserInfo() {
+    fetch('/get-user-info')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch user info');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.userID) {
+                const situationBox = document.getElementById("situationBox");
+                situationBox.innerHTML = `Welcome, user ${data.userID}`;
+            } else {
+                console.error('No user ID found');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching user info:', error);
+        });
 }
 
 function getCookie(name) {
