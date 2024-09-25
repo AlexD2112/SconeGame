@@ -180,6 +180,8 @@ function runTextBoxAdjustment() {
 }
 
 function updateSituationBox() {
+    console.log(document.cookie);
+    console.log(document);
     const userID = getCookie('userID');
     if (userID) {
         const situationBox = document.getElementById("situationBox");
