@@ -5,6 +5,8 @@ export async function serveHTMLView(path) {
     }
 
     try {
+        console.log(viewPath);
+        console.log(new URL(viewPath, 'https://stoneofscone.org/'));
         const view = await fetch(new URL(viewPath, 'https://stoneofscone.org/'));
         if (!view.ok) {
             return new Response('View not found', { status: 404 });
