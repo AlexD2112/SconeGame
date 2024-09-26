@@ -74,7 +74,7 @@ image.onload = function () {
                 logoHeight *= scale;
             }
 
-            const logoX = renderWidth + (canvasWidth - renderWidth) / 2 - logoWidth / 2;
+            const logoX = renderWidth + (canvasWidth - renderWidth) / 3 - logoWidth / 2;
             const logoY = 0;
 
             ctx.drawImage(logo, logoX, logoY, logoWidth, logoHeight);
@@ -135,6 +135,8 @@ function runTextBoxAdjustment() {
     const dateMonthBox = document.getElementById("dateMonthDayBox");
     const yearBox = document.getElementById("dateYearBox");
     const situationBox = document.getElementById("situationBox");
+    const discordButton = document.getElementById("discordLoginButton");
+    const discordInviteButton = document.getElementById("discordInviteButton");
 
     //Change values
     dateMonthBox.innerHTML = "June 11";
@@ -144,7 +146,6 @@ function runTextBoxAdjustment() {
     // Function to adjust position dynamically
     function adjustTextBoxPosition() {
         if (extraSideSpace) {
-
             // Dynamically adjust the position of dateMonthBox (e.g., shift it based on some condition)
             dateMonthBox.style.left = mapWidth * 1 / 6 + "px";
             dateMonthBox.style.bottom = '1vh'; // Set a specific distance from bottom
@@ -155,6 +156,18 @@ function runTextBoxAdjustment() {
 
             situationBox.style.left = (canvas.width + mapWidth) / 2 + "px";
             situationBox.style.top = '50vh';
+
+            discordButton.style.left = "50%";
+            discordButton.style.transform = "translate(-50%, 0%)";
+            discordButton.style.left = renderWidth + 2 * (canvas.width - renderWidth) / 3 + "px";
+            discordButton.style.top = '10vh';
+            
+
+            discordInviteButton.style.left = "50%";
+            discordInviteButton.style.transform = "translate(-50%, 0%)";
+            discordInviteButton.style.left = renderWidth + 2 * (canvas.width - renderWidth) / 3 + "px";
+            discordInviteButton.style.top = '30vh';
+            
         } else {
             //Find bottom of image in vh
             const mapScale = renderHeight / canvas.height;
@@ -169,6 +182,15 @@ function runTextBoxAdjustment() {
         
             //hide situationBox
             situationBox.style.display = "none";
+
+
+            discordInviteButton.style.right = 0 + "px";
+            discordInviteButton.style.width = canvas.width * 2/3 + "px";
+
+            discordButton.style.right = 0 + "px";
+            discordButton.style.width = canvas.width * 2/3 + "px ";
+            discordButton.style.top = "10vh";
+            
         }
     }
 
@@ -188,11 +210,11 @@ function fetchUserInfo() {
             return response.json();
         })
         .then(data => {
-            if (data.userID) {
-                const situationBox = document.getElementById("situationBox");
-                situationBox.innerHTML = `Welcome, user ${data.userID}`;
+            if (data.username) {
+                const discordButton = document.getElementById('discordLoginButton');
+                discordButton.innerHTML = `Logged in as ${data.username}`;
             } else {
-                console.error('No user ID found');
+                console.error('No username found');
             }
         })
         .catch(error => {
