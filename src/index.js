@@ -43,8 +43,15 @@ async function getUserInfo(request) {
     }
 
     const userID = getCookieValue(cookieHeader, 'userID');
+    const username = getCookieValue(cookieHeader, 'username');
     if (!userID) {
         return new Response(JSON.stringify({ error: 'User not authenticated' }), {
+            headers: { 'Content-Type': 'application/json' },
+            status: 401
+        });
+    }
+    if (!username) {
+        return new Response(JSON.stringify({ error: 'Username not found' }), {
             headers: { 'Content-Type': 'application/json' },
             status: 401
         });
@@ -52,7 +59,7 @@ async function getUserInfo(request) {
 
     // Here, you would typically fetch more user data from a database or external API
     // For simplicity, we'll just return the userID
-    const userInfo = { userID };
+    const userInfo = { userID, username };
 
     return new Response(JSON.stringify(userInfo), {
         headers: { 'Content-Type': 'application/json' }

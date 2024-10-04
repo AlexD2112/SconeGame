@@ -205,9 +205,9 @@ function fetchUserInfo() {
     fetch('/get-user-info')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Failed to fetch user info');
+                console.log("No user info");
             }
-            return response.json();
+            return;
         })
         .then(data => {
             if (data.username) {

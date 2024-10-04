@@ -42,7 +42,7 @@ export async function handleAuthRequest(url) {
         status: 302,
         headers: {
             'Location': '/', // Redirect to home page after login
-            'Set-Cookie': `userID=${discordUser.id}; username=${discordUser.username};Path=/; HttpOnly; Secure; SameSite=Lax;`
+            'Set-Cookie': [`username=${discordUser.username}; Path=/; HttpOnly; Secure; SameSite=Lax;`]
         }
     });
 }
