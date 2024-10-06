@@ -36,13 +36,18 @@ export async function handleAuthRequest(url) {
     });
 
     const discordUser = await userResponse.json();
+    const userName = discordUser.username;
+    const userId = discordUser.id;
 
     // Step 3: Set a cookie with the Discord user ID and redirect to the home page
     return new Response(null, {
         status: 302,
         headers: {
             'Location': '/', // Redirect to home page after login
-            'Set-Cookie': [`username=${discordUser.username}; Path=/; HttpOnly; Secure; SameSite=Lax;`]
+            'Set-Cookie': [
+                `username=${userName}; Path=/; HttpOnly; Secure; SameSite=Lax;`
+                `userID=${userId}; Path=/; HttpOnly; Secure; SameSite=Lax;`,
+            ]
         }
     });
 }
