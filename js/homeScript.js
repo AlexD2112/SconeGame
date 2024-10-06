@@ -206,11 +206,12 @@ function fetchUserInfo() {
         .then(response => {
             if (!response.ok) {
                 console.log("No user info");
+                return null;
             }
-            return;
+            return response.json();
         })
         .then(data => {
-            if (data.username) {
+            if (data && data.username) {
                 const discordButton = document.getElementById('discordLoginButton');
                 discordButton.innerHTML = `Logged in as ${data.username}`;
             } else {
