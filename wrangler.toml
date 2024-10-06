@@ -8,8 +8,11 @@ compatibility_date = "2024-09-24"
 [build]
 command = ""  # No need for a build step for static assets
 upload = { dir = "./views" }  # Specify where the static assets are located
-pages_build_output_dir = "./views"
 
 [env.production]
 zone_id = "dba1edac45d6dda43397135ac33ae380"
 routes = ["https://stoneofscone.org/*"]  # This is where the Worker handles requests
+
+# wrangler.toml (wrangler v3.78.6^)
+[observability]
+enabled = true

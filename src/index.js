@@ -44,6 +44,9 @@ async function getUserInfo(request) {
 
     const userID = getCookieValue(cookieHeader, 'userID');
     const username = getCookieValue(cookieHeader, 'username');
+
+    console.log('userID:', userID);
+    console.log('username:', username);
     if (!userID) {
         return new Response(JSON.stringify({ error: 'User not authenticated' }), {
             headers: { 'Content-Type': 'application/json' },

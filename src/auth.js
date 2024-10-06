@@ -45,8 +45,8 @@ export async function handleAuthRequest(url) {
         headers: {
             'Location': '/', // Redirect to home page after login
             'Set-Cookie': [
-                `username=${userName}; Path=/; HttpOnly; Secure; SameSite=Lax;`
                 `userID=${userId}; Path=/; HttpOnly; Secure; SameSite=Lax;`,
+                `username=${userName}; Path=/; HttpOnly; Secure; SameSite=Lax;`
             ]
         }
     });
