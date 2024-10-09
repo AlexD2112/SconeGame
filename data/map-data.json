@@ -1,797 +1,1044 @@
 {
-    "regions": {
-        "000056255": {
-            "name": "Caithness",
-            "color": [
-                0,
-                56,
-                255
-            ],
-            "status": "Earldom",
-            "possessor": "J\u00f3n Magn\u00fasson",
-            "possessor_clan": "N/A",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "004037035": {
-            "name": "Eddrachilles",
-            "color": [
-                4,
-                37,
-                35
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "000255009": {
-            "name": "Strathnaver",
-            "color": [
-                0,
-                255,
-                9
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Donald Mackay",
-                    "clan": "MacKay"
-                },
-                {
-                    "name": "William de Moravia",
-                    "clan": "Sutherland"
-                }
-            ],
-            "notes": ""
-        },
-        "176243113": {
-            "name": "Lewis and Harris",
-            "color": [
-                176,
-                243,
-                113
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "255000000": {
-            "name": "Sutherland",
-            "color": [
-                255,
-                0,
-                0
-            ],
-            "status": "Earldom",
-            "possessor": "William de Moravia",
-            "possessor_clan": "Sutherland",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "234000255": {
-            "name": "Ross",
-            "color": [
-                234,
-                0,
-                255
-            ],
-            "status": "Earldom",
-            "possessor": "William II",
-            "possessor_clan": "Ross",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "062247196": {
-            "name": "Wester Ross",
-            "color": [
-                62,
-                247,
-                196
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "166227176": {
-            "name": "Moray",
-            "color": [
-                166,
-                227,
-                176
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "056130123": {
-            "name": "Buchan",
-            "color": [
-                56,
-                130,
-                123
-            ],
-            "status": "Earldom",
-            "possessor": "John Comyn II",
-            "possessor_clan": "Comyn",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "199062117": {
-            "name": "Uist",
-            "color": [
-                199,
-                62,
-                117
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Ruaidhr\u00ed Mac Ruaidhri",
-                    "clan": "MacRuaidhri"
-                }
-            ],
-            "notes": ""
-        },
-        "222080203": {
-            "name": "Skye",
-            "color": [
-                222,
-                80,
-                203
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Tormod MacLeod",
-                    "clan": "MacLeod"
-                }
-            ],
-            "notes": ""
-        },
-        "221011211": {
-            "name": "Strathisla",
-            "color": [
-                221,
-                11,
-                211
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "217096059": {
-            "name": "Banffshire",
-            "color": [
-                217,
-                96,
-                59
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "022070169": {
-            "name": "Cromarty",
-            "color": [
-                22,
-                70,
-                169
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "086122065": {
-            "name": "Glen Albyn",
-            "color": [
-                86,
-                122,
-                65
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "013079202": {
-            "name": "Garmoran",
-            "color": [
-                13,
-                79,
-                202
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Ruaidhr\u00ed Mac Ruaidhri",
-                    "clan": "MacRuaidhri"
-                }
-            ],
-            "notes": ""
-        },
-        "255061000": {
-            "name": "The Aird",
-            "color": [
-                255,
-                61,
-                0
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "214050081": {
-            "name": "Strathbogie",
-            "color": [
-                214,
-                50,
-                81
-            ],
-            "status": "Lordship",
-            "possessor": "John of Strathbogie",
-            "possessor_clan": "MacDuff",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "243233022": {
-            "name": "Badenoch",
-            "color": [
-                243,
-                233,
-                22
-            ],
-            "status": "Lordship",
-            "possessor": "John Comyn II",
-            "possessor_clan": "Comyn",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "103206114": {
-            "name": "Strathaven",
-            "color": [
-                103,
-                206,
-                114
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "073121060": {
-            "name": "Garioch",
-            "color": [
-                73,
-                121,
-                60
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Robert de Brus",
-                    "clan": "Bruce"
-                },
-                {
-                    "name": "John de Balliol",
-                    "clan": "Balliol"
-                },
-                {
-                    "name": "John Hastings",
-                    "clan": "Hastings"
-                }
-            ],
-            "notes": ""
-        },
-        "217088105": {
-            "name": "Inverness",
-            "color": [
-                217,
-                88,
-                105
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "154103012": {
-            "name": "Mar",
-            "color": [
-                154,
-                103,
-                12
-            ],
-            "status": "Earldom",
-            "possessor": "Domhnall I",
-            "possessor_clan": "Mar",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "002060097": {
-            "name": "Aberdeenshire",
-            "color": [
-                2,
-                60,
-                97
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "021183205": {
-            "name": "Lochaber",
-            "color": [
-                21,
-                183,
-                205
-            ],
-            "status": "Lordship",
-            "possessor": "John Comyn II",
-            "possessor_clan": "Comyn",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "121094069": {
-            "name": "Atholl",
-            "color": [
-                121,
-                94,
-                69
-            ],
-            "status": "Earldom",
-            "possessor": "John of Strathbogie",
-            "possessor_clan": "MacDuff",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "097082085": {
-            "name": "Mearns",
-            "color": [
-                97,
-                82,
-                85
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "030248029": {
-            "name": "Angus",
-            "color": [
-                30,
-                248,
-                29
-            ],
-            "status": "Earldom",
-            "possessor": "Gilbert de Umfraville",
-            "possessor_clan": "Umfraville",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "096133244": {
-            "name": "Lorn",
-            "color": [
-                96,
-                133,
-                244
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "E\u00f3ghan of Argyll",
-                    "clan": "MacDougall"
-                }
-            ],
-            "notes": ""
-        },
-        "087076162": {
-            "name": "Mull",
-            "color": [
-                87,
-                76,
-                162
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "E\u00f3ghan of Argyll",
-                    "clan": "MacDougall"
-                }
-            ],
-            "notes": ""
-        },
-        "166243050": {
-            "name": "Strathearn",
-            "color": [
-                166,
-                243,
-                50
-            ],
-            "status": "Earldom",
-            "possessor": "Malise III",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "182084219": {
-            "name": "Fife",
-            "color": [
-                182,
-                84,
-                219
-            ],
-            "status": "Earldom",
-            "possessor": "Donnchadh III",
-            "possessor_clan": "MacDuff",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "017198215": {
-            "name": "Knapsdale",
-            "color": [
-                17,
-                198,
-                215
-            ],
-            "status": "Lordship",
-            "possessor": "Alexander",
-            "possessor_clan": "Stewart",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "166113024": {
-            "name": "Fothrif",
-            "color": [
-                166,
-                113,
-                24
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "130097229": {
-            "name": "Fifesear",
-            "color": [
-                130,
-                97,
-                229
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "192145014": {
-            "name": "Cowal",
-            "color": [
-                192,
-                145,
-                14
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "238154031": {
-            "name": "Lennox",
-            "color": [
-                238,
-                154,
-                31
-            ],
-            "status": "Earldom",
-            "possessor": "Malcolm I",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "152051248": {
-            "name": "Menteith",
-            "color": [
-                152,
-                51,
-                248
-            ],
-            "status": "Earldom",
-            "possessor": "Alexander",
-            "possessor_clan": "Stewart",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "111088133": {
-            "name": "Islay",
-            "color": [
-                111,
-                88,
-                133
-            ],
-            "status": "Lordship",
-            "possessor": "Alasdair \u00d3g",
-            "possessor_clan": "MacDonald",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "157035133": {
-            "name": "Lothian",
-            "color": [
-                157,
-                35,
-                133
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "013210147": {
-            "name": "March",
-            "color": [
-                13,
-                210,
-                147
-            ],
-            "status": "Earldom",
-            "possessor": "Patrick IV",
-            "possessor_clan": "Dunbar",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "246255191": {
-            "name": "Kilbride",
-            "color": [
-                246,
-                255,
-                191
-            ],
-            "status": "Lordship",
-            "possessor": "Edmund Comyn",
-            "possessor_clan": "Comyn",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "034025222": {
-            "name": "Douglas",
-            "color": [
-                34,
-                25,
-                222
-            ],
-            "status": "Lordship",
-            "possessor": "William le Hardi",
-            "possessor_clan": "Douglas",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "072155185": {
-            "name": "Strathgryffe",
-            "color": [
-                72,
-                155,
-                185
-            ],
-            "status": "Lordship",
-            "possessor": "James Stewart",
-            "possessor_clan": "Stewart",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "254213186": {
-            "name": "Cunningham",
-            "color": [
-                254,
-                213,
-                186
-            ],
-            "status": "Ungranted",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [
-                {
-                    "name": "Robert",
-                    "clan": "Cunningham"
-                }
-            ],
-            "notes": ""
-        },
-        "037202105": {
-            "name": "Lauderdale",
-            "color": [
-                37,
-                202,
-                105
-            ],
-            "status": "Lordship",
-            "possessor": "John de Balliol",
-            "possessor_clan": "Balliol",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "156212156": {
-            "name": "Ettrick Forest",
-            "color": [
-                156,
-                212,
-                156
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "148076017": {
-            "name": "England",
-            "color": [
-                148,
-                76,
-                17
-            ],
-            "status": "External Region",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "074058135": {
-            "name": "Roxburghshire",
-            "color": [
-                74,
-                58,
-                135
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "231148070": {
-            "name": "Kyle",
-            "color": [
-                231,
-                148,
-                70
-            ],
-            "status": "Lordship",
-            "possessor": "James Stewart",
-            "possessor_clan": "Stewart",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "244213181": {
-            "name": "NIthsdale",
-            "color": [
-                244,
-                213,
-                181
-            ],
-            "status": "Royal",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "009184179": {
-            "name": "Annandale",
-            "color": [
-                9,
-                184,
-                179
-            ],
-            "status": "Lordship",
-            "possessor": "Robert de Brus",
-            "possessor_clan": "Bruce",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "076024234": {
-            "name": "Carrick",
-            "color": [
-                76,
-                24,
-                234
-            ],
-            "status": "Earldom",
-            "possessor": "Robert the Bruce",
-            "possessor_clan": "Bruce",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "048081029": {
-            "name": "Northern Ireland",
-            "color": [
-                48,
-                81,
-                29
-            ],
-            "status": "External Region",
-            "possessor": "",
-            "possessor_clan": "",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "090157053": {
-            "name": "Eskedale",
-            "color": [
-                90,
-                157,
-                53
-            ],
-            "status": "Lordship",
-            "possessor": "William le Hardi",
-            "possessor_clan": "Douglas",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "125030021": {
-            "name": "Galloway",
-            "color": [
-                125,
-                30,
-                21
-            ],
-            "status": "Lordship",
-            "possessor": "John de Balliol",
-            "possessor_clan": "Balliol",
-            "notable_landowners": [],
-            "notes": ""
-        },
-        "225075141": {
-            "name": "Debatable Lands",
-            "color": [
-                225,
-                75,
-                141
-            ],
-            "status": "Ungranted",
-            "possessor": "William Armstrong",
-            "possessor_clan": "Armstrong",
-            "notable_landowners": [],
-            "notes": ""
+  "regions": {
+    "103206114": {
+      "name": "Strathaven",
+      "color": [
+        103,
+        206,
+        114
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "111088133": {
+      "name": "Islay",
+      "color": [
+        111,
+        88,
+        133
+      ],
+      "status": "Lordship",
+      "possessor": "Alasdair Óg",
+      "possessor_clan": "MacDonald",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "121094069": {
+      "name": "Atholl",
+      "color": [
+        121,
+        94,
+        69
+      ],
+      "status": "Earldom",
+      "possessor": "John of Strathbogie",
+      "possessor_clan": "MacDuff",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "125030021": {
+      "name": "Galloway",
+      "color": [
+        125,
+        30,
+        21
+      ],
+      "status": "Lordship",
+      "possessor": "John de Balliol",
+      "possessor_clan": "Balliol",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "130097229": {
+      "name": "Fifesear",
+      "color": [
+        130,
+        97,
+        229
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "148076017": {
+      "name": "England",
+      "color": [
+        148,
+        76,
+        17
+      ],
+      "status": "External Region",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "152051248": {
+      "name": "Menteith",
+      "color": [
+        152,
+        51,
+        248
+      ],
+      "status": "Earldom",
+      "possessor": "Alexander",
+      "possessor_clan": "Stewart",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "154103012": {
+      "name": "Mar",
+      "color": [
+        154,
+        103,
+        12
+      ],
+      "status": "Earldom",
+      "possessor": "Domhnall I",
+      "possessor_clan": "Mar",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "156212156": {
+      "name": "Ettrick Forest",
+      "color": [
+        156,
+        212,
+        156
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "157035133": {
+      "name": "Lothian",
+      "color": [
+        157,
+        35,
+        133
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "166113024": {
+      "name": "Fothrif",
+      "color": [
+        166,
+        113,
+        24
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "166227176": {
+      "name": "Moray",
+      "color": [
+        166,
+        227,
+        176
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "166243050": {
+      "name": "Strathearn",
+      "color": [
+        166,
+        243,
+        50
+      ],
+      "status": "Earldom",
+      "possessor": "Malise III",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "176243113": {
+      "name": "Lewis and Harris",
+      "color": [
+        176,
+        243,
+        113
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "182084219": {
+      "name": "Fife",
+      "color": [
+        182,
+        84,
+        219
+      ],
+      "status": "Earldom",
+      "possessor": "Donnchadh III",
+      "possessor_clan": "MacDuff",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "192145014": {
+      "name": "Cowal",
+      "color": [
+        192,
+        145,
+        14
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "199062117": {
+      "name": "Uist",
+      "color": [
+        199,
+        62,
+        117
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Ruaidhrí Mac Ruaidhri",
+          "clan": "MacRuaidhri"
         }
+      ],
+      "notes": ""
+    },
+    "214050081": {
+      "name": "Strathbogie",
+      "color": [
+        214,
+        50,
+        81
+      ],
+      "status": "Lordship",
+      "possessor": "John of Strathbogie",
+      "possessor_clan": "MacDuff",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "217088105": {
+      "name": "Inverness",
+      "color": [
+        217,
+        88,
+        105
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "217096059": {
+      "name": "Banffshire",
+      "color": [
+        217,
+        96,
+        59
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "221011211": {
+      "name": "Strathisla",
+      "color": [
+        221,
+        11,
+        211
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "222080203": {
+      "name": "Skye",
+      "color": [
+        222,
+        80,
+        203
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Tormod MacLeod",
+          "clan": "MacLeod"
+        }
+      ],
+      "notes": ""
+    },
+    "225075141": {
+      "name": "Debatable Lands",
+      "color": [
+        225,
+        75,
+        141
+      ],
+      "status": "Ungranted",
+      "possessor": "William Armstrong",
+      "possessor_clan": "Armstrong",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "231148070": {
+      "name": "Kyle",
+      "color": [
+        231,
+        148,
+        70
+      ],
+      "status": "Lordship",
+      "possessor": "James Stewart",
+      "possessor_clan": "Stewart",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "234000255": {
+      "name": "Ross",
+      "color": [
+        234,
+        0,
+        255
+      ],
+      "status": "Earldom",
+      "possessor": "William II",
+      "possessor_clan": "Ross",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "238154031": {
+      "name": "Lennox",
+      "color": [
+        238,
+        154,
+        31
+      ],
+      "status": "Earldom",
+      "possessor": "Malcolm I",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "243233022": {
+      "name": "Badenoch",
+      "color": [
+        243,
+        233,
+        22
+      ],
+      "status": "Lordship",
+      "possessor": "John Comyn II",
+      "possessor_clan": "Comyn",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "244213181": {
+      "name": "NIthsdale",
+      "color": [
+        244,
+        213,
+        181
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "246255191": {
+      "name": "Kilbride",
+      "color": [
+        246,
+        255,
+        191
+      ],
+      "status": "Lordship",
+      "possessor": "Edmund Comyn",
+      "possessor_clan": "Comyn",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "254213186": {
+      "name": "Cunningham",
+      "color": [
+        254,
+        213,
+        186
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Robert",
+          "clan": "Cunningham"
+        }
+      ],
+      "notes": ""
+    },
+    "255000000": {
+      "name": "Sutherland",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "status": "Earldom",
+      "possessor": "William de Moravia",
+      "possessor_clan": "Sutherland",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "255061000": {
+      "name": "The Aird",
+      "color": [
+        255,
+        61,
+        0
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "000056255": {
+      "name": "Caithness",
+      "color": [
+        0,
+        56,
+        255
+      ],
+      "status": "Earldom",
+      "possessor": "Jón Magnússon",
+      "possessor_clan": "N/A",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "004037035": {
+      "name": "Eddrachilles",
+      "color": [
+        4,
+        37,
+        35
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "000255009": {
+      "name": "Strathnaver",
+      "color": [
+        0,
+        255,
+        9
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Donald Mackay",
+          "clan": "MacKay"
+        },
+        {
+          "name": "William de Moravia",
+          "clan": "Sutherland"
+        }
+      ],
+      "notes": ""
+    },
+    "062247196": {
+      "name": "Wester Ross",
+      "color": [
+        62,
+        247,
+        196
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "056130123": {
+      "name": "Buchan",
+      "color": [
+        56,
+        130,
+        123
+      ],
+      "status": "Earldom",
+      "possessor": "John Comyn II",
+      "possessor_clan": "Comyn",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "022070169": {
+      "name": "Cromarty",
+      "color": [
+        22,
+        70,
+        169
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "086122065": {
+      "name": "Glen Albyn",
+      "color": [
+        86,
+        122,
+        65
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "013079202": {
+      "name": "Garmoran",
+      "color": [
+        13,
+        79,
+        202
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Ruaidhrí Mac Ruaidhri",
+          "clan": "MacRuaidhri"
+        }
+      ],
+      "notes": ""
+    },
+    "073121060": {
+      "name": "Garioch",
+      "color": [
+        73,
+        121,
+        60
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Robert de Brus",
+          "clan": "Bruce"
+        },
+        {
+          "name": "John de Balliol",
+          "clan": "Balliol"
+        },
+        {
+          "name": "John Hastings",
+          "clan": "Hastings"
+        }
+      ],
+      "notes": ""
+    },
+    "002060097": {
+      "name": "Aberdeenshire",
+      "color": [
+        2,
+        60,
+        97
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "021183205": {
+      "name": "Lochaber",
+      "color": [
+        21,
+        183,
+        205
+      ],
+      "status": "Lordship",
+      "possessor": "John Comyn II",
+      "possessor_clan": "Comyn",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "097082085": {
+      "name": "Mearns",
+      "color": [
+        97,
+        82,
+        85
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "030248029": {
+      "name": "Angus",
+      "color": [
+        30,
+        248,
+        29
+      ],
+      "status": "Earldom",
+      "possessor": "Gilbert de Umfraville",
+      "possessor_clan": "Umfraville",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "096133244": {
+      "name": "Lorn",
+      "color": [
+        96,
+        133,
+        244
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Eóghan of Argyll",
+          "clan": "MacDougall"
+        }
+      ],
+      "notes": ""
+    },
+    "087076162": {
+      "name": "Mull",
+      "color": [
+        87,
+        76,
+        162
+      ],
+      "status": "Ungranted",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [
+        {
+          "name": "Eóghan of Argyll",
+          "clan": "MacDougall"
+        }
+      ],
+      "notes": ""
+    },
+    "017198215": {
+      "name": "Knapsdale",
+      "color": [
+        17,
+        198,
+        215
+      ],
+      "status": "Lordship",
+      "possessor": "Alexander",
+      "possessor_clan": "Stewart",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "013210147": {
+      "name": "March",
+      "color": [
+        13,
+        210,
+        147
+      ],
+      "status": "Earldom",
+      "possessor": "Patrick IV",
+      "possessor_clan": "Dunbar",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "034025222": {
+      "name": "Douglas",
+      "color": [
+        34,
+        25,
+        222
+      ],
+      "status": "Lordship",
+      "possessor": "William le Hardi",
+      "possessor_clan": "Douglas",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "072155185": {
+      "name": "Strathgryffe",
+      "color": [
+        72,
+        155,
+        185
+      ],
+      "status": "Lordship",
+      "possessor": "James Stewart",
+      "possessor_clan": "Stewart",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "037202105": {
+      "name": "Lauderdale",
+      "color": [
+        37,
+        202,
+        105
+      ],
+      "status": "Lordship",
+      "possessor": "John de Balliol",
+      "possessor_clan": "Balliol",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "074058135": {
+      "name": "Roxburghshire",
+      "color": [
+        74,
+        58,
+        135
+      ],
+      "status": "Royal",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "009184179": {
+      "name": "Annandale",
+      "color": [
+        9,
+        184,
+        179
+      ],
+      "status": "Lordship",
+      "possessor": "Robert de Brus",
+      "possessor_clan": "Bruce",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "076024234": {
+      "name": "Carrick",
+      "color": [
+        76,
+        24,
+        234
+      ],
+      "status": "Earldom",
+      "possessor": "Robert the Bruce",
+      "possessor_clan": "Bruce",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "048081029": {
+      "name": "Northern Ireland",
+      "color": [
+        48,
+        81,
+        29
+      ],
+      "status": "External Region",
+      "possessor": "",
+      "possessor_clan": "",
+      "notable_landowners": [],
+      "notes": ""
+    },
+    "090157053": {
+      "name": "Eskedale",
+      "color": [
+        90,
+        157,
+        53
+      ],
+      "status": "Lordship",
+      "possessor": "William le Hardi",
+      "possessor_clan": "Douglas",
+      "notable_landowners": [],
+      "notes": ""
     }
+  },
+  "burghs": {
+    "114231066": {
+      "name": "Peebles",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.6517553,
+      "longitude": -3.1885456
+    },
+    "116129244": {
+      "name": "Kinghorn",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.0707374,
+      "longitude": -3.1742285
+    },
+    "128002183": {
+      "name": "Dundee",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.4605938,
+      "longitude": -2.97019
+    },
+    "134028083": {
+      "name": "Tain",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.8119372,
+      "longitude": -4.0550663
+    },
+    "135123054": {
+      "name": "Cromarty",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.6807913,
+      "longitude": -4.0346487
+    },
+    "139162239": {
+      "name": "Wigtown",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 54.8687022,
+      "longitude": -4.4415694
+    },
+    "141191159": {
+      "name": "Rosemarkie",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.5906885,
+      "longitude": -4.1143064
+    },
+    "142019050": {
+      "name": "Lauder",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.7193554,
+      "longitude": -2.7483829
+    },
+    "143254167": {
+      "name": "Forres",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.609864,
+      "longitude": -3.613215
+    },
+    "146243224": {
+      "name": "Linlithgow",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.977167,
+      "longitude": -3.6006234
+    },
+    "154206027": {
+      "name": "Forfar",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.6443013,
+      "longitude": -2.888212
+    },
+    "156035183": {
+      "name": "Fyvie",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.4307456,
+      "longitude": -2.3924105
+    },
+    "157114220": {
+      "name": "Nairn",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.5850133,
+      "longitude": -3.8681503
+    },
+    "157229071": {
+      "name": "Edinburgh",
+      "status": "Royal",
+      "level": 3,
+      "latitude": 55.9533456,
+      "longitude": -3.1883749
+    },
+    "170240105": {
+      "name": "Kintore",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.2369921,
+      "longitude": -2.3455269
+    },
+    "173184016": {
+      "name": "Dunfermline",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.0713724,
+      "longitude": -3.4616183
+    },
+    "185162244": {
+      "name": "Aberdeen",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.1482429,
+      "longitude": -2.0928095
+    },
+    "189250115": {
+      "name": "Cullen",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.6919685,
+      "longitude": -2.8242377
+    },
+    "195252053": {
+      "name": "Jedburgh",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.4776435,
+      "longitude": -2.5553768
+    },
+    "225209092": {
+      "name": "Berwick-upon-Tweed",
+      "status": "Royal",
+      "level": 3,
+      "latitude": 55.7692442,
+      "longitude": -2.0026472
+    },
+    "245025055": {
+      "name": "Rutherglen",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.8283888,
+      "longitude": -4.2116533
+    },
+    "251026233": {
+      "name": "Ayr",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.4628044,
+      "longitude": -4.6302502
+    },
+    "254169118": {
+      "name": "Perth",
+      "status": "Royal",
+      "level": 2,
+      "latitude": 56.3957679,
+      "longitude": -3.4335463
+    },
+    "255032089": {
+      "name": "Montrose",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.7114295,
+      "longitude": -2.4681544
+    },
+    "056136075": {
+      "name": "Lanark",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.6736271,
+      "longitude": -3.7780361
+    },
+    "021001232": {
+      "name": "Elgin",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.6487891,
+      "longitude": -3.3148459
+    },
+    "093087142": {
+      "name": "Roxburgh",
+      "status": "Royal",
+      "level": 2,
+      "latitude": 55.5685529,
+      "longitude": -2.4781358
+    },
+    "054059058": {
+      "name": "Stirling",
+      "status": "Royal",
+      "level": 2,
+      "latitude": 56.1181242,
+      "longitude": -3.9360012
+    },
+    "000071228": {
+      "name": "Auldearn",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.5758079,
+      "longitude": -3.8085371
+    },
+    "005201093": {
+      "name": "Dumfries",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.069836,
+      "longitude": -3.6092292
+    },
+    "070140094": {
+      "name": "Inverkeithing",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.0308767,
+      "longitude": -3.3977498
+    },
+    "091033170": {
+      "name": "Inverness",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 57.4790124,
+      "longitude": -4.225739
+    },
+    "065119085": {
+      "name": "Auchterarder",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.2949827,
+      "longitude": -3.7066774
+    },
+    "024029172": {
+      "name": "Kilrenny",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 56.2344466,
+      "longitude": -2.6890061
+    },
+    "053112060": {
+      "name": "Selkirk",
+      "status": "Royal",
+      "level": 1,
+      "latitude": 55.5470714,
+      "longitude": -2.8415411
+    }
+  }
 }
