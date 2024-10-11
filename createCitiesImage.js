@@ -143,6 +143,11 @@ const processImage = async () => {
         for (const color in royalBurghs) {
             const burgh = royalBurghs[color];
             let [x_pixel, y_pixel] = latLongToPixelCustom(burgh.latitude, burgh.longitude);
+
+            // Save pixel coordinates to data
+            burgh.x_pixel = x_pixel;
+            burgh.y_pixel = y_pixel;
+
             x_pixel = Math.round(x_pixel); // Round to the nearest integer
             y_pixel = Math.round(y_pixel); // Round to the nearest integer
 
@@ -171,6 +176,9 @@ const processImage = async () => {
         const out = fs.createWriteStream(outputImagePath);
         const stream = canvas.createPNGStream();
         stream.pipe(out);
+
+        // Save the updated map data with pixel coordinates, to same file
+        fs.writeFileSync(mapDataPath, JSON.stringify(mapData, null, 2));
     } catch (error) {
         console.error('Error processing image:', error.message);
     }

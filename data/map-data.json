@@ -800,245 +800,315 @@
       "status": "Royal",
       "level": 1,
       "latitude": 55.6517553,
-      "longitude": -3.1885456
+      "longitude": -3.1885456,
+      "x_pixel": 693.460162246321,
+      "y_pixel": 788.4055789654049
     },
     "116129244": {
       "name": "Kinghorn",
       "status": "Royal",
       "level": 1,
       "latitude": 56.0707374,
-      "longitude": -3.1742285
+      "longitude": -3.1742285,
+      "x_pixel": 693.4801422460467,
+      "y_pixel": 679.1151621281786
     },
     "128002183": {
       "name": "Dundee",
       "status": "Royal",
       "level": 1,
       "latitude": 56.4605938,
-      "longitude": -2.97019
+      "longitude": -2.97019,
+      "x_pixel": 721.0018803596133,
+      "y_pixel": 576.8442020757151
     },
     "134028083": {
       "name": "Tain",
       "status": "Royal",
       "level": 1,
       "latitude": 57.8119372,
-      "longitude": -4.0550663
+      "longitude": -4.0550663,
+      "x_pixel": 562.134870684763,
+      "y_pixel": 226.54489088466437
     },
     "135123054": {
       "name": "Cromarty",
       "status": "Royal",
       "level": 1,
       "latitude": 57.6807913,
-      "longitude": -4.0346487
+      "longitude": -4.0346487,
+      "x_pixel": 565.1983019774051,
+      "y_pixel": 260.73500976883446
     },
     "139162239": {
       "name": "Wigtown",
       "status": "Royal",
       "level": 1,
       "latitude": 54.8687022,
-      "longitude": -4.4415694
+      "longitude": -4.4415694,
+      "x_pixel": 509.2902889198431,
+      "y_pixel": 993.9665718414514
     },
     "141191159": {
       "name": "Rosemarkie",
       "status": "Royal",
       "level": 1,
       "latitude": 57.5906885,
-      "longitude": -4.1143064
+      "longitude": -4.1143064,
+      "x_pixel": 554.1765467966461,
+      "y_pixel": 284.31815089472155
     },
     "142019050": {
       "name": "Lauder",
       "status": "Royal",
       "level": 1,
       "latitude": 55.7193554,
-      "longitude": -2.7483829
+      "longitude": -2.7483829,
+      "x_pixel": 757.8274142798597,
+      "y_pixel": 769.4491101589273
     },
     "143254167": {
       "name": "Forres",
       "status": "Royal",
       "level": 1,
       "latitude": 57.609864,
-      "longitude": -3.613215
+      "longitude": -3.613215,
+      "x_pixel": 624.4187277174511,
+      "y_pixel": 278.63705735120294
     },
     "146243224": {
       "name": "Linlithgow",
       "status": "Royal",
       "level": 1,
       "latitude": 55.977167,
-      "longitude": -3.6006234
+      "longitude": -3.6006234,
+      "x_pixel": 631.6744285545466,
+      "y_pixel": 704.4828373734287
     },
     "154206027": {
       "name": "Forfar",
       "status": "Royal",
       "level": 1,
       "latitude": 56.6443013,
-      "longitude": -2.888212
+      "longitude": -2.888212,
+      "x_pixel": 731.7490080014229,
+      "y_pixel": 528.6682591183196
     },
     "156035183": {
       "name": "Fyvie",
       "status": "Royal",
       "level": 1,
       "latitude": 57.4307456,
-      "longitude": -2.3924105
+      "longitude": -2.3924105,
+      "x_pixel": 797.1170567668082,
+      "y_pixel": 321.79908430585334
     },
     "157114220": {
       "name": "Nairn",
       "status": "Royal",
       "level": 1,
       "latitude": 57.5850133,
-      "longitude": -3.8681503
+      "longitude": -3.8681503,
+      "x_pixel": 588.7187880202999,
+      "y_pixel": 285.5210827543478
     },
     "157229071": {
       "name": "Edinburgh",
       "status": "Royal",
       "level": 3,
       "latitude": 55.9533456,
-      "longitude": -3.1883749
+      "longitude": -3.1883749,
+      "x_pixel": 691.9971715474056,
+      "y_pixel": 709.7672727551663
     },
     "170240105": {
       "name": "Kintore",
       "status": "Royal",
       "level": 1,
       "latitude": 57.2369921,
-      "longitude": -2.3455269
+      "longitude": -2.3455269,
+      "x_pixel": 805.1993684141768,
+      "y_pixel": 372.11446399546816
     },
     "173184016": {
       "name": "Dunfermline",
       "status": "Royal",
       "level": 1,
       "latitude": 56.0713724,
-      "longitude": -3.4616183
+      "longitude": -3.4616183,
+      "x_pixel": 651.600953099543,
+      "y_pixel": 679.6400478676219
     },
     "185162244": {
       "name": "Aberdeen",
       "status": "Royal",
       "level": 1,
       "latitude": 57.1482429,
-      "longitude": -2.0928095
+      "longitude": -2.0928095,
+      "x_pixel": 841.7804802976895,
+      "y_pixel": 394.1538266411647
     },
     "189250115": {
       "name": "Cullen",
       "status": "Royal",
       "level": 1,
       "latitude": 57.6919685,
-      "longitude": -2.8242377
+      "longitude": -2.8242377,
+      "x_pixel": 734.6734109390364,
+      "y_pixel": 255.26047005395557
     },
     "195252053": {
       "name": "Jedburgh",
       "status": "Royal",
       "level": 1,
       "latitude": 55.4776435,
-      "longitude": -2.5553768
+      "longitude": -2.5553768,
+      "x_pixel": 787.9411610271633,
+      "y_pixel": 831.7810027001208
     },
     "225209092": {
       "name": "Berwick-upon-Tweed",
       "status": "Royal",
       "level": 3,
       "latitude": 55.7692442,
-      "longitude": -2.0026472
+      "longitude": -2.0026472,
+      "x_pixel": 867.0104291176369,
+      "y_pixel": 753.3542317893903
     },
     "245025055": {
       "name": "Rutherglen",
       "status": "Royal",
       "level": 1,
       "latitude": 55.8283888,
-      "longitude": -4.2116533
+      "longitude": -4.2116533,
+      "x_pixel": 542.6530923455929,
+      "y_pixel": 744.0414953505243
     },
     "251026233": {
       "name": "Ayr",
       "status": "Royal",
       "level": 1,
       "latitude": 55.4628044,
-      "longitude": -4.6302502
+      "longitude": -4.6302502,
+      "x_pixel": 481.2231695317996,
+      "y_pixel": 839.3640090243899
     },
     "254169118": {
       "name": "Perth",
       "status": "Royal",
       "level": 2,
       "latitude": 56.3957679,
-      "longitude": -3.4335463
+      "longitude": -3.4335463,
+      "x_pixel": 654.3801761701617,
+      "y_pixel": 594.9737744234045
     },
     "255032089": {
       "name": "Montrose",
       "status": "Royal",
       "level": 1,
       "latitude": 56.7114295,
-      "longitude": -2.4681544
+      "longitude": -2.4681544,
+      "x_pixel": 791.6407712940725,
+      "y_pixel": 509.6543765246225
     },
     "056136075": {
       "name": "Lanark",
       "status": "Royal",
       "level": 1,
       "latitude": 55.6736271,
-      "longitude": -3.7780361
+      "longitude": -3.7780361,
+      "x_pixel": 606.6236555715545,
+      "y_pixel": 783.9083382713663
     },
     "021001232": {
       "name": "Elgin",
       "status": "Royal",
       "level": 1,
       "latitude": 57.6487891,
-      "longitude": -3.3148459
+      "longitude": -3.3148459,
+      "x_pixel": 666.1201199216301,
+      "y_pixel": 267.8694006569827
     },
     "093087142": {
       "name": "Roxburgh",
       "status": "Royal",
       "level": 2,
       "latitude": 55.5685529,
-      "longitude": -2.4781358
+      "longitude": -2.4781358,
+      "x_pixel": 798.6836522551639,
+      "y_pixel": 807.7780683092996
     },
     "054059058": {
       "name": "Stirling",
       "status": "Royal",
       "level": 2,
       "latitude": 56.1181242,
-      "longitude": -3.9360012
+      "longitude": -3.9360012,
+      "x_pixel": 582.389440361307,
+      "y_pixel": 668.2493197999182
     },
     "000071228": {
       "name": "Auldearn",
       "status": "Royal",
       "level": 1,
       "latitude": 57.5758079,
-      "longitude": -3.8085371
+      "longitude": -3.8085371,
+      "x_pixel": 597.1066912511003,
+      "y_pixel": 287.8386350912727
     },
     "005201093": {
       "name": "Dumfries",
       "status": "Royal",
       "level": 1,
       "latitude": 55.069836,
-      "longitude": -3.6092292
+      "longitude": -3.6092292,
+      "x_pixel": 633.5047364362148,
+      "y_pixel": 940.9380065620928
     },
     "070140094": {
       "name": "Inverkeithing",
       "status": "Royal",
       "level": 1,
       "latitude": 56.0308767,
-      "longitude": -3.3977498
+      "longitude": -3.3977498,
+      "x_pixel": 661.0759736195705,
+      "y_pixel": 690.0604563960054
     },
     "091033170": {
       "name": "Inverness",
       "status": "Royal",
       "level": 1,
       "latitude": 57.4790124,
-      "longitude": -4.225739
+      "longitude": -4.225739,
+      "x_pixel": 538.6651928391561,
+      "y_pixel": 313.54424310441374
     },
     "065119085": {
       "name": "Auchterarder",
       "status": "Royal",
       "level": 1,
       "latitude": 56.2949827,
-      "longitude": -3.7066774
+      "longitude": -3.7066774,
+      "x_pixel": 615.2123789983041,
+      "y_pixel": 621.7926172825427
     },
     "024029172": {
       "name": "Kilrenny",
       "status": "Royal",
       "level": 1,
       "latitude": 56.2344466,
-      "longitude": -2.6890061
+      "longitude": -2.6890061,
+      "x_pixel": 763.1048536182407,
+      "y_pixel": 634.8992918732672
     },
     "053112060": {
       "name": "Selkirk",
       "status": "Royal",
       "level": 1,
       "latitude": 55.5470714,
-      "longitude": -2.8415411
+      "longitude": -2.8415411,
+      "x_pixel": 745.1971364158503,
+      "y_pixel": 814.6834998113849
     }
   }
 }
