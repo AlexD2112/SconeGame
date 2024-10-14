@@ -165,7 +165,7 @@
       ],
       "status": "Earldom",
       "possessor": "Malise III",
-      "possessor_clan": "",
+      "possessor_clan": "Strathearn",
       "notable_landowners": [],
       "notes": ""
     },
@@ -220,7 +220,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Ruaidhrí Mac Ruaidhri",
+          "name": "Lachlann mac Ruaidhrí",
           "clan": "MacRuaidhri"
         }
       ],
@@ -304,7 +304,7 @@
         141
       ],
       "status": "Ungranted",
-      "possessor": "William Armstrong",
+      "possessor": "Alexander Armstrong",
       "possessor_clan": "Armstrong",
       "notable_landowners": [],
       "notes": ""
@@ -344,7 +344,7 @@
       ],
       "status": "Earldom",
       "possessor": "Malcolm I",
-      "possessor_clan": "",
+      "possessor_clan": "Lennox",
       "notable_landowners": [],
       "notes": ""
     },
@@ -356,13 +356,13 @@
         22
       ],
       "status": "Lordship",
-      "possessor": "John Comyn II",
+      "possessor": "John 'The Black' Comyn II",
       "possessor_clan": "Comyn",
       "notable_landowners": [],
       "notes": ""
     },
     "244213181": {
-      "name": "NIthsdale",
+      "name": "Nithsdale",
       "color": [
         244,
         213,
@@ -388,7 +388,7 @@
       "notes": ""
     },
     "254213186": {
-      "name": "Cunningham",
+      "name": "Kilmaurs",
       "color": [
         254,
         213,
@@ -399,7 +399,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Robert",
+          "name": "Gilbert",
           "clan": "Cunningham"
         }
       ],
@@ -440,7 +440,7 @@
       ],
       "status": "Earldom",
       "possessor": "Jón Magnússon",
-      "possessor_clan": "N/A",
+      "possessor_clan": "Orkney",
       "notable_landowners": [],
       "notes": ""
     },
@@ -500,7 +500,7 @@
         123
       ],
       "status": "Earldom",
-      "possessor": "John Comyn II",
+      "possessor": "John 'The Black' Comyn II",
       "possessor_clan": "Comyn",
       "notable_landowners": [],
       "notes": ""
@@ -543,7 +543,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Ruaidhrí Mac Ruaidhri",
+          "name": "Lachlann mac Ruaidhrí",
           "clan": "MacRuaidhri"
         }
       ],
@@ -561,7 +561,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Robert de Brus",
+          "name": "Robert 'the Competitor'",
           "clan": "Bruce"
         },
         {
@@ -596,7 +596,7 @@
         205
       ],
       "status": "Lordship",
-      "possessor": "John Comyn II",
+      "possessor": "John 'The Black' Comyn II",
       "possessor_clan": "Comyn",
       "notable_landowners": [],
       "notes": ""
@@ -639,7 +639,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Eóghan of Argyll",
+          "name": "Alexander of Argyll",
           "clan": "MacDougall"
         }
       ],
@@ -657,7 +657,7 @@
       "possessor_clan": "",
       "notable_landowners": [
         {
-          "name": "Eóghan of Argyll",
+          "name": "Alexander of Argyll",
           "clan": "MacDougall"
         }
       ],
@@ -749,7 +749,7 @@
         179
       ],
       "status": "Lordship",
-      "possessor": "Robert de Brus",
+      "possessor": "Robert 'the Competitor'",
       "possessor_clan": "Bruce",
       "notable_landowners": [],
       "notes": ""
@@ -762,7 +762,7 @@
         234
       ],
       "status": "Earldom",
-      "possessor": "Robert the Bruce",
+      "possessor": "Robert de Bruce",
       "possessor_clan": "Bruce",
       "notable_landowners": [],
       "notes": ""

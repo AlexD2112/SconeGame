@@ -26,7 +26,7 @@ async function serveRequest(path) {
         return await serveStaticAsset(path);
     }
 
-    if (path === '/' || path === '/map' || path === '/estate' || path === '/claimants' || path === '/profile') {
+    if (path === '/' || path === '/map' || path === '/estate' || path === '/clan' || path === '/claimants' || path === '/profile') {
         return await serveHTMLView(path);
     }
 
