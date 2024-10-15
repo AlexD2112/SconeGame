@@ -1,0 +1,330 @@
+{
+  "clanMap": {
+    "MacDonald": {
+      "1000": {
+        "name": "Alasdair Óg",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Islay"
+          }
+        ]
+      }
+    },
+    "MacDuff": {
+      "1001": {
+        "name": "John of Strathbogie",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Atholl"
+          },
+          {
+            "title": "Lordship",
+            "region": "Strathbogie"
+          }
+        ]
+      },
+      "1002": {
+        "name": "Donnchadh III",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Fife"
+          }
+        ]
+      }
+    },
+    "Balliol": {
+      "1003": {
+        "name": "John de Balliol",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Galloway"
+          },
+          {
+            "title": "Laird",
+            "region": "Garioch"
+          },
+          {
+            "title": "Lordship",
+            "region": "Lauderdale"
+          }
+        ]
+      }
+    },
+    "Stewart": {
+      "1004": {
+        "name": "Alexander",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Menteith"
+          },
+          {
+            "title": "Lordship",
+            "region": "Knapsdale"
+          }
+        ]
+      },
+      "1005": {
+        "name": "James Stewart",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Kyle"
+          },
+          {
+            "title": "Lordship",
+            "region": "Strathgryffe"
+          }
+        ]
+      }
+    },
+    "Mar": {
+      "1006": {
+        "name": "Domhnall I",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Mar"
+          }
+        ]
+      }
+    },
+    "Strathearn": {
+      "1007": {
+        "name": "Malise III",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Strathearn"
+          }
+        ]
+      }
+    },
+    "MacRuaidhri": {
+      "1008": {
+        "name": "Lachlann mac Ruaidhrí",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Uist"
+          },
+          {
+            "title": "Laird",
+            "region": "Garmoran"
+          }
+        ]
+      }
+    },
+    "MacLeod": {
+      "1009": {
+        "name": "Tormod MacLeod",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Skye"
+          }
+        ]
+      }
+    },
+    "Armstrong": {
+      "1010": {
+        "name": "Alexander Armstrong",
+        "titles": [
+          {
+            "title": "Ungranted",
+            "region": "Debatable Lands"
+          }
+        ]
+      }
+    },
+    "Ross": {
+      "1011": {
+        "name": "William II",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Ross"
+          }
+        ]
+      }
+    },
+    "Lennox": {
+      "1012": {
+        "name": "Malcolm I",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Lennox"
+          }
+        ]
+      }
+    },
+    "Comyn": {
+      "1013": {
+        "name": "John 'The Black' Comyn II",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Badenoch"
+          },
+          {
+            "title": "Earldom",
+            "region": "Buchan"
+          },
+          {
+            "title": "Lordship",
+            "region": "Lochaber"
+          }
+        ]
+      },
+      "1014": {
+        "name": "Edmund Comyn",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Kilbride"
+          }
+        ]
+      }
+    },
+    "Cunningham": {
+      "1015": {
+        "name": "Robert",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Kilmaurs"
+          }
+        ]
+      }
+    },
+    "Sutherland": {
+      "1016": {
+        "name": "William de Moravia",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Sutherland"
+          },
+          {
+            "title": "Laird",
+            "region": "Strathnaver"
+          }
+        ]
+      }
+    },
+    "Orkney": {
+      "1017": {
+        "name": "Jón Magnússon",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Caithness"
+          }
+        ]
+      }
+    },
+    "MacKay": {
+      "1018": {
+        "name": "Donald Mackay",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Strathnaver"
+          }
+        ]
+      }
+    },
+    "Bruce": {
+      "1019": {
+        "name": "Robert de Brus",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Garioch"
+          },
+          {
+            "title": "Lordship",
+            "region": "Annandale"
+          }
+        ]
+      },
+      "1020": {
+        "name": "Robert the Bruce",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Carrick"
+          }
+        ]
+      }
+    },
+    "Hastings": {
+      "1021": {
+        "name": "John Hastings",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Garioch"
+          }
+        ]
+      }
+    },
+    "Umfraville": {
+      "1022": {
+        "name": "Gilbert de Umfraville",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "Angus"
+          }
+        ]
+      }
+    },
+    "MacDougall": {
+      "1023": {
+        "name": "Eóghan of Argyll",
+        "titles": [
+          {
+            "title": "Laird",
+            "region": "Lorn"
+          },
+          {
+            "title": "Laird",
+            "region": "Mull"
+          }
+        ]
+      }
+    },
+    "Dunbar": {
+      "1024": {
+        "name": "Patrick IV",
+        "titles": [
+          {
+            "title": "Earldom",
+            "region": "March"
+          }
+        ]
+      }
+    },
+    "Douglas": {
+      "1025": {
+        "name": "William le Hardi",
+        "titles": [
+          {
+            "title": "Lordship",
+            "region": "Douglas"
+          },
+          {
+            "title": "Lordship",
+            "region": "Eskedale"
+          }
+        ]
+      }
+    }
+  }
+}

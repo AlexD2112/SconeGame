@@ -1,0 +1,206 @@
+{
+    "clanMap": {
+        "MacDonald": {
+            "progenitor": {
+                "id": 9999,
+                "name": "Domhnall mac Raghnaill"
+            },
+            "members": [
+                1000
+            ]
+        },
+        "MacDuff": {
+            "progenitor": {
+                "id": 9998,
+                "name": "Gille Míchéil"
+            },
+            "members": [
+                1001,
+                1002
+            ]
+        },
+        "Balliol": {
+            "progenitor": {
+                "id": 9997,
+                "name": ""
+            },
+            "members": [
+                1003
+            ]
+        },
+        "Stewart": {
+            "progenitor": {
+                "id": 9996,
+                "name": ""
+            },
+            "members": [
+                1004,
+                1005
+            ]
+        },
+        "Mar": {
+            "progenitor": {
+                "id": 9995,
+                "name": ""
+            },
+            "members": [
+                1006
+            ]
+        },
+        "Strathearn": {
+            "progenitor": {
+                "id": 9994,
+                "name": ""
+            },
+            "members": [
+                1007
+            ]
+        },
+        "MacRuaidhri": {
+            "progenitor": {
+                "id": 9993,
+                "name": ""
+            },
+            "members": [
+                1008
+            ]
+        },
+        "MacLeod": {
+            "progenitor": {
+                "id": 9992,
+                "name": ""
+            },
+            "members": [
+                1009
+            ]
+        },
+        "Armstrong": {
+            "progenitor": {
+                "id": 9991,
+                "name": ""
+            },
+            "members": [
+                1010
+            ]
+        },
+        "Ross": {
+            "progenitor": {
+                "id": 9990,
+                "name": ""
+            },
+            "members": [
+                1011
+            ]
+        },
+        "Lennox": {
+            "progenitor": {
+                "id": 9989,
+                "name": ""
+            },
+            "members": [
+                1012
+            ]
+        },
+        "Comyn": {
+            "progenitor": {
+                "id": 9988,
+                "name": ""
+            },
+            "members": [
+                1013,
+                1014
+            ]
+        },
+        "Cunningham": {
+            "progenitor": {
+                "id": 9987,
+                "name": ""
+            },
+            "members": [
+                1015
+            ]
+        },
+        "Sutherland": {
+            "progenitor": {
+                "id": 9986,
+                "name": ""
+            },
+            "members": [
+                1016
+            ]
+        },
+        "Orkney": {
+            "progenitor": {
+                "id": 9985,
+                "name": ""
+            },
+            "members": [
+                1017
+            ]
+        },
+        "MacKay": {
+            "progenitor": {
+                "id": 9984,
+                "name": ""
+            },
+            "members": [
+                1018
+            ]
+        },
+        "Bruce": {
+            "progenitor": {
+                "id": 9983,
+                "name": ""
+            },
+            "members": [
+                1019,
+                1020
+            ]
+        },
+        "Hastings": {
+            "progenitor": {
+                "id": 9982,
+                "name": ""
+            },
+            "members": [
+                1021
+            ]
+        },
+        "Umfraville": {
+            "progenitor": {
+                "id": 9981,
+                "name": ""
+            },
+            "members": [
+                1022
+            ]
+        },
+        "MacDougall": {
+            "progenitor": {
+                "id": 9980,
+                "name": ""
+            },
+            "members": [
+                1023
+            ]
+        },
+        "Dunbar": {
+            "progenitor": {
+                "id": 9979,
+                "name": ""
+            },
+            "members": [
+                1024
+            ]
+        },
+        "Douglas": {
+            "progenitor": {
+                "id": 9978,
+                "name": ""
+            },
+            "members": [
+                1025
+            ]
+        }
+    }
+}

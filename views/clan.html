@@ -21,12 +21,31 @@
         </ul>
     </nav>
 
-    <!-- Main Content for Home -->
+    <!-- Main Content for Clan Page -->
     <main>
-        <h1>Welcome to the Clan Page</h1>
-        <p>Placeholder- this will include player clan.</p>
+        <!-- Dropdown search to select tree progenitor -->
+        <div class="dropdown-container">
+            <input type="text" id="progenitor-search" placeholder="Search for a person..." oninput="filterSuggestions()">
+            <div id="suggestions-container" class="suggestions-list"></div>
+            <button id="toggle-search" class="arrow-collapse" onclick="toggle(false)">&#x25C0;</button> <!-- Left arrow -->
+        </div>
+
+        <!-- Side panel with tree options -->
+        <div class="tree-options-container">
+            <div class = "tree-options-panel">
+                <h3>Tree Options</h3>
+                <label><input type="checkbox" id="show-descendants" checked> Show Descendants</label><br>
+                <label><input type="checkbox" id="show-ancestors"> Show Ancestors</label><br>
+                <label><input type="checkbox" id="show-siblings"> Show Siblings</label><br>
+            </div>
+            <button id="toggle-options" class="arrow-collapse" onclick="toggle(true)">&#x25B6;</button> <!-- Right arrow -->
+        </div>              
+
+        <div id="tree-display">
+            <!-- Family tree will eventually be displayed here -->
+        </div>
     </main>
 
-    <script src="js/clanScript.js"></script>
+    <script src="/js/clanScript.js"></script>
 </body>
 </html>
