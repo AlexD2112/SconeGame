@@ -185,12 +185,12 @@ function runTextBoxAdjustment() {
 
 
             discordInviteButton.style.right = 0 + "px";
-            discordInviteButton.style.width = canvas.width * 2/3 + "px";
+            discordInviteButton.style.width = canvas.width * 2/5 + "px";
+            discordInviteButton.style.top = "4vh";
 
             discordButton.style.right = 0 + "px";
-            discordButton.style.width = canvas.width * 2/3 + "px ";
-            discordButton.style.top = "10vh";
-            
+            discordButton.style.width = canvas.width * 2/5 + "px ";
+            discordButton.style.top = "16vh";
         }
     }
 

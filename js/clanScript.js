@@ -3,6 +3,10 @@ const geniProfilesUrl = '/data/geni-profiles.json';
 let progenitorList = [];
 let geniData = {};
 
+//Get screen width and height
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
+
 function filterSuggestions() {
     const searchInput = document.getElementById('progenitor-search').value.toLowerCase();
     const suggestionsContainer = document.getElementById('suggestions-container');
@@ -130,18 +134,39 @@ function createAncestorsTree(personId) {
 
 // Toggle the options panel visibility
 function toggle(isOptions) {
+    let collapseOther = false;
+    if (screenWidth < screenHeight) {
+        collapseOther = true;
+    }
+
     if (isOptions) {
         const panel = document.querySelector('.tree-options-container');
         const toggleButton = document.getElementById('toggle-options');
 
         panel.classList.toggle('collapsed');
         toggleButton.classList.toggle('collapsed');
+
+        if (collapseOther) {
+            const searchPanel = document.querySelector('.dropdown-container');
+            const searchButton = document.getElementById('toggle-search');
+
+            searchPanel.classList.add('collapsed');
+            searchButton.classList.add('collapsed');
+        }
     } else {
         const panel = document.querySelector('.dropdown-container');
         const toggleButton = document.getElementById('toggle-search');
 
         panel.classList.toggle('collapsed');
         toggleButton.classList.toggle('collapsed');
+
+        if (collapseOther) {
+            const optionsPanel = document.querySelector('.tree-options-container');
+            const optionsButton = document.getElementById('toggle-options');
+
+            optionsPanel.classList.add('collapsed');
+            optionsButton.classList.add('collapsed');
+        }
     }
 }
 
@@ -176,6 +201,11 @@ function setInitialValue() {
 async function init() {
     await getProgenitors();  // Wait for getProgenitors to complete
     setInitialValue();  // Run setInitialValue after getProgenitors finishes
+
+    if (screenWidth < screenHeight) {
+        toggle(true);
+        toggle(false);
+    }
 }
 
 
