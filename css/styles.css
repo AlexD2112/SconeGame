@@ -256,6 +256,22 @@ button:hover {
     padding: 20px;
 }
 
+#tree-display-wrapper {
+    width: 100vw;
+    /* or 800px, etc. */
+    height: 80vh;
+    /* some size */
+    overflow: auto;
+    /* or auto */
+    position: relative;
+}
+
+#tree-display {
+    position: relative;
+    /* your dynamic width/height get set via JS */
+}
+
+
 .arrow-collapse {
     position: absolute;
     background-color: #005EB8;
@@ -291,6 +307,11 @@ button:hover {
     border-left: 2px solid #B37E31;
 }
 
-.descendants-container, .ancestors-container {
+.tree-node-abs {
+    font-family: Arial, sans-serif;
+}
+
+.descendants-container,
+.ancestors-container {
     margin-left: 30px;
 }
