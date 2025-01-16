@@ -158,13 +158,11 @@ function runTextBoxAdjustment() {
             situationBox.style.top = '50vh';
 
             discordButton.style.left = "50%";
-            discordButton.style.transform = "translate(-50%, 0%)";
             discordButton.style.left = renderWidth + 2 * (canvas.width - renderWidth) / 3 + "px";
             discordButton.style.top = '10vh';
             
 
             discordInviteButton.style.left = "50%";
-            discordInviteButton.style.transform = "translate(-50%, 0%)";
             discordInviteButton.style.left = renderWidth + 2 * (canvas.width - renderWidth) / 3 + "px";
             discordInviteButton.style.top = '30vh';
             
