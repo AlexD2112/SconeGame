@@ -657,8 +657,6 @@ const checkAlive = async () => {
     }
 }
 
-checkAlive();
-
 const purgeUnpurged = async () => {
     //Find everyone with a nonexistent mother or father. Purge them.
     geniData = await loadGeniData();
@@ -701,3 +699,5 @@ const listLooseKids = async () => {
         }
     }
 }
+
+runPurge("1182");

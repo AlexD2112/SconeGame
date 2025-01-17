@@ -379,6 +379,9 @@
     "father": "1049",
     "children": [
       "1058"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1052": {
@@ -480,6 +483,9 @@
     "father": "1053",
     "children": [
       "1072"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1058": {
@@ -531,6 +537,9 @@
       "1090",
       "1092",
       "1086"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1061": {
@@ -720,6 +729,9 @@
     "father": "1053",
     "children": [
       "1094"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1075": {
@@ -1241,6 +1253,9 @@
     "father": "1083",
     "children": [
       "1179"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1112": {
@@ -1256,6 +1271,9 @@
     "father": "1083",
     "children": [
       "1171"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1113": {
@@ -1283,6 +1301,9 @@
     "father": "1083",
     "children": [
       "1166"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1115": {
@@ -1298,6 +1319,9 @@
     "father": "1083",
     "children": [
       "1006"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1116": {
@@ -1314,6 +1338,9 @@
     "children": [
       "1153",
       "1155"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1117": {
@@ -1347,6 +1374,9 @@
     "children": [
       "1192",
       "1011"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1119": {
@@ -1803,6 +1833,9 @@
       "1207",
       "1200",
       "1188"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1151": {
@@ -4600,7 +4633,7 @@
     "birthYear": [
       "1174"
     ],
-    "deathYear": null,
+    "deathYear": "alive",
     "gender": "Male",
     "geni_profile": "https://www.geni.com/people/Patrick-Galithly/6000000010381345989",
     "father": "1317"
@@ -5769,6 +5802,9 @@
     "father": "1123",
     "children": [
       "1619"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1499": {
@@ -7500,7 +7536,7 @@
     ]
   },
   "1675": {
-    "name": "First Queen Regnant Margaret Eriksdatter",
+    "name": "Margaret, Maid of Norway",
     "birthYear": [
       "1283"
     ],
@@ -7509,7 +7545,8 @@
     ],
     "gender": "Female",
     "geni_profile": "https://www.geni.com/people/First-Queen-Regnant-Margaret-Eriksdatter/6000000010201379576",
-    "mother": "1591"
+    "mother": "1591",
+    "father": "2799"
   },
   "1676": {
     "name": "Galfridus de Home",
@@ -9078,6 +9115,9 @@
       "1921",
       "1925",
       "1911"
+    ],
+    "tags": [
+      "excluded"
     ]
   },
   "1901": {
@@ -16659,5 +16699,17 @@
     "geni_profile": "https://www.geni.com/people/Louis-X-le-Hutin-roi-de-France/6000000002791771362",
     "father": "2703",
     "children": []
+  },
+  "2799": {
+    "name": "Erik II",
+    "birthYear": [
+      "1268"
+    ],
+    "deathYear": "alive",
+    "gender": "Male",
+    "geni_profile": "https://www.geni.com/people/Eric-II-king-of-Norway/6000000000351087679",
+    "children": [
+      "1675"
+    ]
   }
 }

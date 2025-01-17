@@ -91,12 +91,17 @@ function buildHierarchy(rootId, data) {
       name: person.name,
       children: []
     };
+
+    if (data[rootId].tags && data[rootId].tags.includes('excluded')) {
+      return null;
+    }
+
+    console.log(data[1074]);
   
     // Recursively build children
     if (person.children && person.children.length > 0) {
       for (let childId of person.children) {
         // THE KEY CHECK: skip if no one is alive in that child's subtree
-        console.log(anyDescendantAlive(childId, data));
         if (anyDescendantAlive(childId, data)) {
           const childNode = buildHierarchy(childId, data);
           if (childNode) {
@@ -227,15 +232,7 @@ function buildPrimaryParentDescendants(rootId, geniData) {
     const filteredData = {};
     for (let id of descendantsSet) {
         // Copy minimal fields you need for rendering
-        filteredData[id] = {
-            name: geniData[id].name,
-            birthYear: geniData[id].birthYear,
-            deathYear: geniData[id].deathYear,
-            father: geniData[id].father,
-            mother: geniData[id].mother,
-            gender: geniData[id].gender,
-            children: []
-        };
+        filteredData[id] = { ...geniData[id], children: [] };
     }
 
     // 3) For each person in the set, pick father if in set, else mother if in set
@@ -346,7 +343,6 @@ function renderTree(rootId, geniData) {
         nodeDiv.style.alignItems = 'center';
     
         // Set border radius based on gender
-        console.log(person);
         if (person.gender === 'Female') {
             nodeDiv.style.borderRadius = '20px'; // Heavily beveled for females
         } else {
@@ -446,13 +442,11 @@ async function getProgenitors() {
             throw new Error('Failed to fetch Geni profiles');
         }
         geniData = await response.json();
-        console.log('Geni profiles:', geniData);
 
         progenitorList = Object.entries(geniData).map(([key, profile]) => ({
             name: profile.name,
             id: key
         }));
-        console.log('Progenitors:', progenitorList);
     } catch (error) {
         console.error('Error fetching Geni profiles:', error);
     }
@@ -460,8 +454,8 @@ async function getProgenitors() {
 
 function setInitialValue() {
     const searchInput = document.getElementById('progenitor-search');
-    searchInput.value = 'David I';
-    selectProgenitor('David I', 1059);
+    searchInput.value = 'Duncan I';
+    selectProgenitor('Duncan I', 1049);
 }
 
 async function init() {

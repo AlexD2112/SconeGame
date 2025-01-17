@@ -162,7 +162,7 @@ function runTextBoxAdjustment() {
             discordButton.style.top = '10vh';
             
 
-            discordInviteButton.style.left = "50%";
+            discordInviteButton.style.left = "50%"; 
             discordInviteButton.style.left = renderWidth + 2 * (canvas.width - renderWidth) / 3 + "px";
             discordInviteButton.style.top = '30vh';
             
