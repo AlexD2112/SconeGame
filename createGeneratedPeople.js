@@ -700,4 +700,48 @@ const listLooseKids = async () => {
     }
 }
 
-generateFullTree("https://www.geni.com/people/Marjorie/6000000038048314211");
+const mergeGeniDatas = async () => {
+    geniData = await loadGeniData();
+    //Load in the other geni data
+    const rawData = fs.readFileSync(path.join(__dirname, './data/geni-correct-births.json'));
+    const geniData2 = JSON.parse(rawData);
+
+    //For people up to 2798, take all data from geniData2. Also, if there is a tags array including the string "excluded" in geniData, add that to the tags array in geniData2 (which may not exist)
+    for (let i = 1; i <= 2798; i++) {
+        if (geniData2[i]) {
+            //First, save the tags array from geniData
+            let tags = [];
+            if (geniData[i].tags) {
+                tags = geniData[i].tags;
+            }
+            //Then, set geniData to geniData2
+            geniData[i] = geniData2[i];
+            //Then, add the tags array back in
+            geniData[i].tags = tags;
+        } else {
+            //If not in geniData2, delete from geniData
+            delete geniData[i];
+        }
+    }
+
+    fs.writeFileSync(geniDataPath, JSON.stringify(geniData, null, 2));
+}
+
+const checkDuplicated = async () => {
+    //check if there are any people in geniData who have the same geni_profile as someone else
+    geniData = await loadGeniData();
+    let people = Object.keys(geniData);
+    let i = 0;
+    let people2 = [];
+    for (const person of people) {
+        if (people2.includes(geniData[person].geni_profile)) {
+            i++;
+            console.log(geniData[person].name);
+        } else {
+            people2.push(geniData[person].geni_profile);
+        }
+    }
+    console.log(i);
+}
+
+checkDuplicated();
