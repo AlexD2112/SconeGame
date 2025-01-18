@@ -23,7 +23,7 @@ const generateFamilyTree = async (profileLink, father = null, mother = null) => 
         if (characterID && characterID.birthYear) {
             if (father) {
                 geniData[characterID].father = father;
-            }
+            }n
             if (mother) {
                 geniData[characterID].mother = mother;
             }
@@ -700,4 +700,4 @@ const listLooseKids = async () => {
     }
 }
 
-runPurge("1182");
+generateFullTree("https://www.geni.com/people/Marjorie/6000000038048314211");
