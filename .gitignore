@@ -1,3 +1,6 @@
 node_modules
 .wrangler
 /.wrangler
+data/british-boundaries.json
+data/river-nodes.json
+data/scottish-boundaries.json
