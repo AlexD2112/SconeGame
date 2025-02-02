@@ -1110,5 +1110,97 @@
       "x_pixel": 745.1971364158503,
       "y_pixel": 814.6834998113849
     }
+  },
+  "castles": {
+    "PLACEHOLDER_KEY_1": {
+      "name": "Edinburgh Castle",
+      "status": "Royal",
+      "level": 3,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_2": {
+      "name": "Stirling Castle",
+      "status": "Royal",
+      "level": 2,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_3": {
+      "name": "Eilean Donan Castle",
+      "status": "Occupied",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_4": {
+      "name": "Urquhart Castle",
+      "status": "Ruin",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_5": {
+      "name": "Glamis Castle",
+      "status": "Occupied",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_6": {
+      "name": "Dunnottar Castle",
+      "status": "Ruin",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_7": {
+      "name": "Balmoral Castle",
+      "status": "Royal",
+      "level": 3,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_8": {
+      "name": "Inveraray Castle",
+      "status": "Occupied",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_9": {
+      "name": "Culzean Castle",
+      "status": "Occupied",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    },
+    "PLACEHOLDER_KEY_10": {
+      "name": "Doune Castle",
+      "status": "Occupied",
+      "level": 1,
+      "latitude": "",
+      "longitude": "",
+      "x_pixel": "",
+      "y_pixel": ""
+    }
   }
 }
