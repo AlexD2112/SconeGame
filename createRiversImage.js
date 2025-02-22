@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Define file paths
-const overpassDataPath = path.join(__dirname, './data/river-nodes.json');
+const overpassDataPath = path.join(__dirname, './data/british-river-nodes.json');
 const inputImagePath = path.join(__dirname, './assets/images/ScotlandRegionsFinal.png');
 const outputImagePath = path.join(__dirname, './assets/images/ScotlandRiversMap.png');
 
