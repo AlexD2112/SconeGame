@@ -10,3 +10,9 @@ data/geni-profiles copy 3.json
 data/geni-profiles copy 4.json
 data/geni-profiles copy.json
 data/backups/
+/temp_extracted_tiles
+assets/elevationMaps/batch_1.tif
+assets/elevationMaps/batch_2.tif
+assets/elevationMaps/batch_3.tif
+assets/elevationMaps/batch_4.tif
+assets/elevationMaps/master.tif
