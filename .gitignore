@@ -3,6 +3,7 @@ node_modules
 /.wrangler
 data/british-boundaries.json
 data/river-nodes.json
+data/british-river-nodes.json
 data/scottish-boundaries.json
 data/geni-profiles copy 2.json
 data/geni-profiles copy 3.json
