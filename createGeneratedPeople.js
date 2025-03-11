@@ -1547,7 +1547,7 @@ const chooseBirthDates = async () => {
     //Save data
     fs.writeFileSync(path.join(__dirname, './data/geni-profilesTEST.json'), JSON.stringify(geniData, null, 2));
 };
-chooseBirthDates();
+//chooseBirthDates();
 // const runAsync = async () => {
 //     geniData = await loadGeniData();
 //     runPurge("2719");
