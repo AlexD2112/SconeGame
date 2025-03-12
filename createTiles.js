@@ -1,156 +1,251 @@
 const fs = require("fs");
 const path = require("path");
 const { createCanvas, loadImage } = require("canvas");
+const cliProgress = require("cli-progress");
 
+// File paths
 const IMAGE_PATH = "./assets/images/ScotlandRegionsFinal.png";
-const OUTPUT_PATH = "./assets/images/ScotlandRegionsFinal_Refined.png";
+const UPSCALED_IMAGE_PATH = "./assets/images/ScotlandRegionsFinal_Upscaled.png";
+const FINAL_PATH = "./assets/images/ScotlandRegionsFinal_Refined.png";
+const BORDERS_PATH = "./data/british-boundaries.json";
+
 const SCALE_FACTOR = 4; // 4x upscale
 
-// Main processing function
-async function processHighQualityRefinement() {
-  console.log("🚀 Starting high-quality refinement...");
+const latLongToPixelCustom = (latitude, longitude) => {
+  const interceptX = -3081.148;
+  const interceptY = 8073.893;
 
-  // Load and upscale image (nearest neighbor, no smoothing)
+  const coefficientsX = [-5.40e-07, 268.2856, 472.7847, -5.2413, -8.2911, -1.6347, 0.03218, 0.04388, 0.02912, -0.00457];
+  const coefficientsY = [-2.71e-07, 134.4546, 236.9145, -7.21995, -8.89493, -2.73564, 0.04395, 0.08062, 0.03345, 0.00779];
+
+  let x_pixel = interceptX +
+    coefficientsX[0] * 1 +
+    coefficientsX[1] * latitude +
+    coefficientsX[2] * longitude +
+    coefficientsX[3] * (latitude ** 2) +
+    coefficientsX[4] * latitude * longitude +
+    coefficientsX[5] * (longitude ** 2) +
+    coefficientsX[6] * (latitude ** 3) +
+    coefficientsX[7] * (latitude ** 2) * longitude +
+    coefficientsX[8] * latitude * (longitude ** 2) +
+    coefficientsX[9] * (longitude ** 3);
+
+  let y_pixel = interceptY +
+    coefficientsY[0] * 1 +
+    coefficientsY[1] * latitude +
+    coefficientsY[2] * longitude +
+    coefficientsY[3] * (latitude ** 2) +
+    coefficientsY[4] * latitude * longitude +
+    coefficientsY[5] * (longitude ** 2) +
+    coefficientsY[6] * (latitude ** 3) +
+    coefficientsY[7] * (latitude ** 2) * longitude +
+    coefficientsY[8] * latitude * (longitude ** 2) +
+    coefficientsY[9] * (longitude ** 3);
+
+  return [Math.round(x_pixel), Math.round(y_pixel)];
+};
+
+// **Step 1: Load and Process Image**
+async function upscaleAndSmoothImage() {
+  console.log("🚀 Upscaling image with smoothing...");
+
+  // Load original image
   const image = await loadImage(IMAGE_PATH);
   const originalWidth = image.width;
   const originalHeight = image.height;
   const newWidth = originalWidth * SCALE_FACTOR;
   const newHeight = originalHeight * SCALE_FACTOR;
 
-  // Create an upscaled canvas and draw the pixelated image
+  // Create a high-resolution blank canvas for upscaled image
   const canvas = createCanvas(newWidth, newHeight);
   const ctx = canvas.getContext("2d");
-  ctx.imageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false; // Ensure no blurring
+
+  // Draw original image pixelated
   ctx.drawImage(image, 0, 0, newWidth, newHeight);
-  
-  // Get the upscaled pixel data
+
+  // Get pixel data
   const imageData = ctx.getImageData(0, 0, newWidth, newHeight);
   const pixels = imageData.data;
 
-  // Helper: Safely get pixel from the upscaled image
+  // Function to get pixel color safely
   function getPixel(x, y) {
     if (x < 0 || x >= newWidth || y < 0 || y >= newHeight) {
-      return [255, 255, 255, 255]; // default white if out-of-bounds
+      return [255, 255, 255, 255]; // Default to white for out-of-bounds
     }
-    const idx = (y * newWidth + x) * 4;
-    return [
-      pixels[idx],
-      pixels[idx + 1],
-      pixels[idx + 2],
-      pixels[idx + 3]
-    ];
+    const index = (y * newWidth + x) * 4;
+    return [pixels[index], pixels[index + 1], pixels[index + 2], pixels[index + 3]];
   }
 
-  // Helper: Compare two colors (ignoring alpha)
-  function colorsEqual(a, b) {
-    return a[0] === b[0] && a[1] === b[1] && a[2] === b[2];
+  // Function to check if a pixel is an edge pixel
+  function isBoundaryPixel(x, y) {
+    const baseColor = getPixel(x, y);
+    let distinctColors = new Set();
+
+    for (let dx = -1; dx <= 1; dx++) {
+      for (let dy = -1; dy <= 1; dy++) {
+        if (dx === 0 && dy === 0) continue; // Skip self
+        const neighborColor = getPixel(x + dx, y + dy);
+        distinctColors.add(neighborColor.join(","));
+      }
+    }
+    return distinctColors.size > 1; // More than 1 color in neighborhood = boundary
   }
 
-  // Build a boundary mask over the upscaled image:
-  // For each pixel, mark as true if any neighbor has a different color.
-  const boundaryMask = Array.from({ length: newHeight }, () => Array(newWidth).fill(false));
+  // **Step 2: Apply Nearest Neighbor Smoothing to Boundaries**
+  console.log("🚀 Smoothing inter-region boundaries...");
+
+  const updatedPixels = new Map(); // Store new values for boundary pixels
+
   for (let y = 1; y < newHeight - 1; y++) {
     for (let x = 1; x < newWidth - 1; x++) {
-      const base = getPixel(x, y);
-      let isBoundary = false;
-      for (let dx = -1; dx <= 1; dx++) {
-        for (let dy = -1; dy <= 1; dy++) {
-          if (dx === 0 && dy === 0) continue;
-          const neighbor = getPixel(x + dx, y + dy);
-          if (!colorsEqual(base, neighbor)) {
-            isBoundary = true;
-            break;
+      if (isBoundaryPixel(x, y)) {
+        // Find the most common neighboring color
+        let colorCounts = {};
+        let maxCount = 0;
+        let dominantColor = getPixel(x, y); // Default to original
+
+        for (let dx = -1; dx <= 1; dx++) {
+          for (let dy = -1; dy <= 1; dy++) {
+            if (dx === 0 && dy === 0) continue; // Skip center pixel
+            const neighborColor = getPixel(x + dx, y + dy);
+
+            // Convert RGB to a string key
+            const colorKey = neighborColor.join(",");
+            if (!colorCounts[colorKey]) colorCounts[colorKey] = 0;
+            colorCounts[colorKey]++;
+
+            // Track the most common color
+            if (colorCounts[colorKey] > maxCount) {
+              maxCount = colorCounts[colorKey];
+              dominantColor = neighborColor;
+            }
           }
         }
-        if (isBoundary) break;
+
+        // Store updated pixel color
+        updatedPixels.set(`${x},${y}`, dominantColor);
       }
-      boundaryMask[y][x] = isBoundary;
     }
   }
-  console.log("✅ Boundary mask constructed.");
 
-  // Trace a boundary contour from the boundary mask using a simple Moore-neighbor tracing algorithm.
-  function traceBoundary(mask, startX, startY) {
-    const height = mask.length;
-    const width = mask[0].length;
-    const contour = [];
-    const visited = new Set();
+  console.log(`🎨 Smoothed ${updatedPixels.size} boundary pixels.`);
 
-    let current = [startX, startY];
-    let prevDir = 0; // initial direction index
-    const dirs = [
-      [-1, -1], [ 0, -1], [1, -1],
-      [1,  0],  [1,  1],  [0, 1],
-      [-1, 1],  [-1, 0]
-    ]; // Clockwise order
+  // Apply pixel changes
+  updatedPixels.forEach((color, key) => {
+    const [x, y] = key.split(",").map(Number);
+    const index = (y * newWidth + x) * 4;
+    pixels[index] = color[0];
+    pixels[index + 1] = color[1];
+    pixels[index + 2] = color[2];
+    pixels[index + 3] = 255;
+  });
 
-    do {
-      contour.push(current);
-      visited.add(current.join(","));
-      let found = false;
-      // Start checking from direction (prevDir - 1) mod 8
-      for (let i = 0; i < dirs.length; i++) {
-        const dirIndex = (prevDir + i + 7) % 8;
-        const [dx, dy] = dirs[dirIndex];
-        const nx = current[0] + dx;
-        const ny = current[1] + dy;
-        if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
-        if (mask[ny][nx]) {
-          current = [nx, ny];
-          prevDir = dirIndex;
-          found = true;
-          break;
+  // Apply updated pixel data
+  ctx.putImageData(imageData, 0, 0);
+
+  // Save the upscaled image
+  fs.writeFileSync(UPSCALED_IMAGE_PATH, canvas.toBuffer("image/png"));
+  // console.log(✅ Smoothed upscaled image saved: ${UPSCALED_IMAGE_PATH});
+
+  return UPSCALED_IMAGE_PATH;
+}
+
+// **Step 1: Load GeoJSON Boundaries**
+const boundariesData = JSON.parse(fs.readFileSync(BORDERS_PATH, "utf-8"));
+
+// **Step 2: Apply Water Boundaries Using GeoJSON**
+async function applyBorders() {
+  const OUTPUT_PATH = FINAL_PATH;
+  console.log("🌊 Applying water boundaries...");
+
+  // Load the upscaled image
+  const image = await loadImage(UPSCALED_IMAGE_PATH);
+  const width = image.width;
+  const height = image.height;
+
+  // Create a canvas for the new processed map
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext("2d");
+
+  // Draw the base upscaled image
+  ctx.drawImage(image, 0, 0, width, height);
+
+  // Ensure everything is initially visible
+  ctx.globalCompositeOperation = "source-over";
+  ctx.fillStyle = "rgba(0, 0, 0, 1)"; // Fully opaque base
+  ctx.fillRect(0, 0, width, height);
+
+  // Convert everything outside the land boundary to transparent
+  ctx.globalCompositeOperation = "destination-in";
+  ctx.fillStyle = "black"; // Used for masking land areas
+
+  const progressBar = new cliProgress.SingleBar({
+    format: "Processing polygons [{bar}] {percentage}% | {value}/{total} polygons",
+    barCompleteChar: "█",
+    barIncompleteChar: "░",
+    hideCursor: true
+  });
+
+  const totalPolygons = boundariesData.features.length;
+  progressBar.start(totalPolygons, 0);
+
+  // **Function to trace the land boundary**
+  const traceLandBoundary = (coordinates) => {
+    coordinates.forEach((ring) => {
+      ctx.beginPath();
+      ring.forEach(([lon, lat], index) => {
+        const [x, y] = latLongToPixelCustom(lat, lon);
+
+        // Adjust scaling to fit the upscaled map
+        const scaledX = Math.round((x / 971) * width);
+        const scaledY = Math.round((y / 1062) * height);
+
+        if (isNaN(scaledX) || isNaN(scaledY)) return; // Skip invalid coords
+
+        if (index === 0) {
+          ctx.moveTo(scaledX, scaledY);
+        } else {
+          ctx.lineTo(scaledX, scaledY);
         }
-      }
-      if (!found) break;
-    } while (current.join(",") !== [startX, startY].join(",") && contour.length < 10000);
+      });
+      ctx.closePath();
+      ctx.fill();
+    });
+  };
 
-    return contour;
-  }
+  // **Step 2: Apply Mask for Non-Land Areas**
+  boundariesData.features.forEach((feature, index) => {
+    if (!feature.geometry) return;
 
-  // Find a starting point for the contour (first boundary pixel found)
-  let start = null;
-  for (let y = 0; y < newHeight && !start; y++) {
-    for (let x = 0; x < newWidth && !start; x++) {
-      if (boundaryMask[y][x]) {
-        start = [x, y];
-      }
+    if (feature.geometry.type === "Polygon") {
+      traceLandBoundary(feature.geometry.coordinates);
+    } else if (feature.geometry.type === "MultiPolygon") {
+      feature.geometry.coordinates.forEach((polygon) => {
+        traceLandBoundary(polygon);
+      });
     }
-  }
-  if (!start) {
-    console.log("No boundary found.");
-    return;
-  }
-  const contour = traceBoundary(boundaryMask, start[0], start[1]);
-  console.log(`Detected contour with ${contour.length} points.`);
+    // Update progress bar
+    progressBar.update(index + 1);
+  });
 
-  // Optionally, you might simplify the contour here using an algorithm like Ramer-Douglas-Peucker.
-  // For simplicity, we'll proceed with the raw contour.
+  // Stop progress bar
+  progressBar.stop();
+  // Restore normal drawing mode
+  ctx.globalCompositeOperation = "source-over";
 
-  // Draw smooth curves through the contour using quadratic Bézier curves.
-  // We'll split the contour into segments and use each segment's midpoint as control points.
-  ctx.strokeStyle = "red";
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  if (contour.length >= 3) {
-    // Move to first point
-    ctx.moveTo(contour[0][0], contour[0][1]);
-    // For each group of 3 points, use quadraticCurveTo:
-    for (let i = 1; i < contour.length - 1; i += 2) {
-      const cp = contour[i]; // control point
-      const ep = contour[i + 1]; // end point
-      ctx.quadraticCurveTo(cp[0], cp[1], ep[0], ep[1]);
-    }
-    // Optionally, close the contour:
-    ctx.closePath();
-  }
-  ctx.stroke();
-  console.log("✅ Bézier curve drawn over contour.");
+  // **Step 3: Save the Processed Image**
+  fs.writeFileSync(OUTPUT_PATH, canvas.toBuffer("image/png"));
+  console.log(`✅ Adjusted land-only map saved: ${OUTPUT_PATH}`);
+}
 
-  // Save the final image with the overlay.
-  const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync(OUTPUT_PATH, buffer);
-  console.log(`✅ Final refined image saved to: ${OUTPUT_PATH}`);
+
+// **Run Full Processing**
+async function processHighQualityRefinement() {
+  console.log("🚀 Starting high-quality region refinement...");
+  // await upscaleAndSmoothImage();
+  await applyBorders();
+  console.log("🎉 High-quality refinement complete!");
 }
 
 processHighQualityRefinement();
