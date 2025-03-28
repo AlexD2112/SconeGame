@@ -554,11 +554,14 @@ async function processHighQualityRefinement() {
     // Optionally run upscaleAndSmoothImage() and createBorders() here.
     // await upscaleAndSmoothImage();
     // await createBorders();
+    // await applyBorders();
     // With clustering, tile generation is handled by cluster workers.
     // The master process will launch a worker for each region.
 }
 
-findTilePixelResolutions(780, 376, 784, 380);
+findTilePixelResolutions(632, 552, 640, 560);
+
+// processHighQualityRefinement();
 
 // if (cluster.isMaster) {
 //     processHighQualityRefinement();
